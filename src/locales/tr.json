@@ -1,0 +1,290 @@
+{
+  "nav": {
+    "features": "Özellikler",
+    "pricing": "Fiyatlandırma",
+    "coaches": "Antrenörler İçin",
+    "getStarted": "Başlayın"
+  },
+  "home": {
+    "hero": {
+      "title": "Fitness Yolculuğunuzu Dönüştürün",
+      "subtitle": "Tüm ihtiyaçlarınızı karşılayan platformumuzla ilerlemenizi takip edin, antrenörlerle bağlantı kurun ve fitness hedeflerinize ulaşın.",
+      "startTrial": "Ücretsiz Denemeye Başla",
+      "coachLogin": "Antrenör Girişi"
+    },
+    "features": {
+      "title": "Temel Özellikler",
+      "tracking": {
+        "title": "Gerçek Zamanlı Takip",
+        "description": "Adımları, kalorileri ve antrenmanları detaylı analizlerle gerçek zamanlı olarak izleyin"
+      },
+      "coaching": {
+        "title": "Antrenör Panosu",
+        "description": "Antrenörlerin müşterileri yönetmek ve ilerlemeyi takip etmek için profesyonel araçlar"
+      },
+      "goals": {
+        "title": "Hedef Belirleme",
+        "description": "Akıllı hatırlatıcılarla kişiselleştirilmiş fitness hedefleri belirleyin ve bu hedeflere ulaşın"
+      },
+      "community": {
+        "title": "Topluluk Desteği",
+        "description": "Benzer düşünen bireylerle bağlantı kurun ve fitness yolculuğunuzu paylaşın"
+      }
+    },
+    "pricing": {
+      "title": "Basit Fiyatlandırma",
+      "getStarted": "Başlayın",
+      "plans": {
+        "basic": {
+          "name": "Temel",
+          "price": "9",
+          "features": {
+            "tracking": "Adım Takibi",
+            "calories": "Kalori Sayacı",
+            "goals": "Temel Hedefler",
+            "coaching": "1 Antrenör Bağlantısı"
+          }
+        },
+        "pro": {
+          "name": "Pro",
+          "price": "29",
+          "features": {
+            "tracking": "Adım Takibi",
+            "calories": "Kalori Sayacı",
+            "goals": "Gelişmiş Hedefler",
+            "coaching": "3 Antrenör Bağlantısı",
+            "community": "Topluluk Desteği"
+          }
+        },
+        "enterprise": {
+          "name": "Kurumsal",
+          "price": "99",
+          "features": {
+            "tracking": "Adım Takibi",
+            "calories": "Kalori Sayacı",
+            "goals": "Özelleştirilmiş Hedefler",
+            "coaching": "Sınırsız Antrenör Bağlantısı",
+            "community": "Topluluk Desteği"
+          }
+        }
+      }
+    },
+    "testimonials": {
+      "title": "Kullanıcılarımız Ne Diyor?"
+    },
+    "faq": {
+      "title": "Sıkça Sorulan Sorular",
+      "questions": [
+        {
+          "q": "Bir antrenörle nasıl bağlantı kurabilirim?",
+          "a": "Kayıt olduktan sonra, sertifikalı antrenörler ağımızda gezinerek paketlerine doğrudan platformumuz üzerinden abone olabilirsiniz."
+        },
+        {
+          "q": "Aboneliğimi değiştirebilir miyim?",
+          "a": "Evet, hesap ayarlarınızdan aboneliğinizi yükseltebilir, düşürebilir veya antrenör aboneliğinizi değiştirebilirsiniz."
+        },
+        {
+          "q": "Ücretsiz deneme sürümü var mı?",
+          "a": "Evet, yeni kullanıcılar için temel özelliklerimizi keşfetmeleri amacıyla 14 günlük ücretsiz deneme sunuyoruz."
+        },
+        {
+          "q": "Ödemeler nasıl çalışıyor?",
+          "a": "Tüm ödemeleri güvenli bir şekilde işliyoruz. Bir antrenöre abone olduğunuzda, aboneliğinizi iptal edene kadar aylık olarak faturalandırılırsınız."
+        }
+      ]
+    }
+  },
+  "coaches": {
+    "hero": {
+      "title": "Koçluk İşinizi Çevrimiçi Büyütün",
+      "subtitle": "Platformumuz, fitness antrenörlerinin kolay yönetilebilir abonelikler, müşteri takibi ve sorunsuz ödemelerle sürdürülebilir çevrimiçi işletmeler kurmalarını sağlıyor.",
+      "joinButton": "Antrenör Olarak Katıl",
+      "learnMore": "Daha Fazla Bilgi"
+    },
+    "features": {
+      "title": "Tümü Bir Arada Koçluk Platformu",
+      "subtitle": "Çevrimiçi koçluk işinizi başarıyla yürütmek için ihtiyacınız olan her şey",
+      "cards": {
+        "dashboard": {
+          "title": "Antrenör Panosu",
+          "description": "Sezgisel kontrol panelimizle koçluk işinizin tam bir özetini alın"
+        },
+        "subscriptions": {
+          "title": "Özel Abonelikler",
+          "description": "Müşterileriniz için kişiselleştirilmiş abonelik paketleri oluşturun ve yönetin"
+        },
+        "analytics": {
+          "title": "Performans Analizleri",
+          "description": "Güçlü analiz araçlarıyla müşteri ilerlemesini ve iş metriklerini takip edin"
+        },
+        "messaging": {
+          "title": "Müşteri Mesajlaşma",
+          "description": "Güvenli mesajlaşma sistemimiz aracılığıyla müşterilerinizle iletişim halinde kalın"
+        },
+        "workouts": {
+          "title": "Antrenman Yönetimi",
+          "description": "Müşteri antrenmanları ve fitness programları oluşturun, atayın ve takip edin"
+        },
+        "scheduling": {
+          "title": "Akıllı Planlama",
+          "description": "Müsaitlik durumunuzu yönetin ve müşterilerinizin kolayca seans rezervasyonu yapmasını sağlayın"
+        }
+      },
+      "tabs": {
+        "dashboard": {
+          "title": "Pano",
+          "contentTitle": "Koçluk İşinize Genel Bakış",
+          "contentDescription": "Fitness profesyonelleri için özel olarak tasarlanmış sezgisel kontrol panelimizle koçluk işinizin tam bir özetini alın.",
+          "points": {
+            "overview": "Aktif müşteriler, gelir ve yaklaşan seanslar için gerçek zamanlı genel bakış",
+            "clients": "Müşteri aktivite akışı ve katılım metrikleri",
+            "revenue": "Aylık ve yıllık gelir projeksiyonları",
+            "customization": "Sizin için en önemli olanlara odaklanmak için özelleştirilebilir widget'lar"
+          }
+        },
+        "payments": {
+          "title": "Ödemeler",
+          "contentTitle": "Sorunsuz Ödeme İşleme",
+          "contentDescription": "Platformumuz tüm ödeme karmaşıklığını halleder, böylece siz koçluğa ve işinizi büyütmeye odaklanabilirsiniz.",
+          "points": {
+            "subscriptions": "Farklı fiyatlandırma ve özelliklere sahip birden fazla abonelik seviyesi oluşturun",
+            "payouts": "Otomatik haftalık veya aylık ödemeler doğrudan banka hesabınıza",
+            "autoRenewal": "Sorunsuz abonelik yenilemeleri ve ödeme hatırlatıcıları",
+            "invoicing": "Müşterileriniz için otomatik faturalandırma ve ödeme makbuzları"
+          }
+        },
+        "clients": {
+          "title": "Müşteri Yönetimi",
+          "contentTitle": "Akıcı Müşteri Deneyimi",
+          "contentDescription": "Kapsamlı müşteri yönetimi özelliklerimizle olağanüstü bir koçluk deneyimi sunun.",
+          "points": {
+            "profiles": "Fitness geçmişi ve hedefleriyle detaylı müşteri profilleri",
+            "progress": "Ölçümler, fotoğraflar ve performans metrikleriyle ilerleme takibi",
+            "messaging": "Müşterilerle doğrudan mesajlaşma ve dosya paylaşımı",
+            "assignments": "Müşterilere antrenmanlar, beslenme planları ve diğer görevler atayın"
+          }
+        }
+      },
+      "details": {
+        "security": {
+          "title": "Güvenli Ödemeler",
+          "description": "Şifreleme ve dolandırıcılık korumasıyla endüstri standardı ödeme işleme"
+        },
+        "payments": {
+          "title": "Abonelik Yönetimi",
+          "description": "Esnek fiyatlandırmayla özel abonelik paketleri oluşturun ve yönetin"
+        },
+        "messaging": {
+          "title": "Uygulama İçi Mesajlaşma",
+          "description": "Güvenli mesajlaşma platformumuz aracılığıyla müşterilerle doğrudan iletişim kurun"
+        },
+        "analytics": {
+          "title": "Müşteri Analizleri",
+          "description": "Detaylı analizler ve raporlarla müşteri ilerlemesini ve performansını takip edin"
+        },
+        "customization": {
+          "title": "Özelleştirilebilir Pano",
+          "description": "İşletmeniz için en önemli olanlara odaklanmak için panonuzu kişiselleştirin"
+        },
+        "support": {
+          "title": "7/24 Destek",
+          "description": "Özel müşteri destek ekibimizle her zaman yardım alın"
+        }
+      }
+    },
+    "howItWorks": {
+      "title": "Nasıl Çalışır?",
+      "subtitle": "Sadece birkaç basit adımda başlayın",
+      "getStartedButton": "Hemen Başlayın",
+      "steps": {
+        "signup": {
+          "title": "Hesabınızı Oluşturun",
+          "description": "Antrenör olarak kaydolun ve uzmanlık alanlarınızı ve deneyiminizi ekleyerek profilinizi tamamlayın"
+        },
+        "packages": {
+          "title": "Paketleri Ayarlayın",
+          "description": "Özel özellikler ve fiyatlandırmayla koçluk paketlerinizi oluşturun"
+        },
+        "clients": {
+          "title": "Müşterileri Davet Edin",
+          "description": "Mevcut müşterilerinizi davet edin veya platformumuzda yenileri tarafından keşfedilin"
+        },
+        "earnings": {
+          "title": "Ödeme Alın",
+          "description": "Müşterileriniz hizmetlerinize abone oldukça otomatik ödemeler alın"
+        }
+      }
+    },
+    "calculator": {
+      "title": "Gelir Hesaplayıcı",
+      "subtitle": "Platformumuzda antrenör olarak ne kadar kazanabileceğinizi görün",
+      "estimate": "Kazancınızı Tahmin Edin",
+      "numberOfClients": "Müşteri Sayısı",
+      "subscriptionPrice": "Aylık Abonelik Ücreti",
+      "retentionRate": "Müşteri Tutma Oranı",
+      "potentialEarnings": "Potansiyel Kazancınız",
+      "monthly": "Aylık Gelir",
+      "annual": "Yıllık Gelir",
+      "fiveYear": "5 Yıllık Gelir",
+      "disclaimer": "Bu rakamlar, girdilerinize ve %10'luk bir platform ücretine dayalı tahminlerdir. Gerçek sonuçlar değişiklik gösterebilir.",
+      "platformFee": "Platform ücretimiz abonelik gelirinin sadece %10'udur, gizli maliyet yoktur.",
+      "startButton": "Şimdi Kazanmaya Başlayın"
+    },
+    "testimonials": {
+      "title": "Antrenörler Platformumuzu Seviyor",
+      "subtitle": "İşletmelerini dönüştüren fitness profesyonellerinden dinleyin",
+      "joinButton": "Bu Başarılı Antrenörlere Katılın"
+    },
+    "faq": {
+      "title": "Sıkça Sorulan Sorular",
+      "subtitle": "Platformumuzda antrenörlük hakkında bilmeniz gereken her şey",
+      "moreQuestions": "Başka sorularınız mı var?",
+      "contactButton": "Bize Ulaşın",
+      "questions": {
+        "pricing": {
+          "question": "Platformu kullanmanın maliyeti nedir?",
+          "answer": "Katılmak için ön maliyet yoktur. Platform üzerinden sattığınız aboneliklerden %10 komisyon alıyoruz. Aylık ücret yok, gizli maliyet yok."
+        },
+        "start": {
+          "question": "Ne kadar sürede kazanmaya başlayabilirim?",
+          "answer": "Profilinizi ve abonelik paketlerinizi 30 dakikadan kısa sürede ayarlayabilirsiniz. Onaylandıktan sonra müşterileri davet ederek hemen kazanmaya başlayabilirsiniz."
+        },
+        "payout": {
+          "question": "Ne zaman ve nasıl ödeme alırım?",
+          "answer": "Tüm abonelik gelirleri için her hafta ödeme işlemi yapıyoruz. Ödemeleri doğrudan banka havalesi, PayPal veya Stripe ile almayı seçebilirsiniz."
+        },
+        "requirements": {
+          "question": "Antrenör olmak için hangi niteliklere ihtiyacım var?",
+          "answer": "Belirli sertifikalar gerektirmesek de tüm antrenör başvurularını inceliyoruz. Tanınmış fitness sertifikalarına sahip olmak başvurunuza yardımcı olacak ve müşteri güveni oluşturacaktır."
+        },
+        "support": {
+          "question": "Antrenörlere ne tür destek sunuyorsunuz?",
+          "answer": "7/24 teknik destek, kapsamlı bir bilgi bankası ve koçluk işletmenizi nasıl maksimize edeceğinize dair düzenli web seminerleri sunuyoruz. Ayrıca fitness profesyonellerinden oluşan topluluğumuza katılırsınız."
+        },
+        "clients": {
+          "question": "Mevcut müşterilerimi platforma getirebilir miyim?",
+          "answer": "Kesinlikle! Mevcut müşterilerinizi davet etmeyi kolaylaştırıyoruz. Ayrıca platformumuzda antrenör arayan yeni müşteriler tarafından keşfedilme fırsatına sahip olacaksınız."
+        }
+      }
+    },
+    "cta": {
+      "title": "Koçluk İşinizi Büyütmeye Hazır mısınız?",
+      "subtitle": "Platformumuzla işletmelerini dönüştüren binlerce başarılı antrenöre katılın",
+      "startButton": "Ücretsiz Başlayın",
+      "scheduleDemo": "Demo Planlayın",
+      "benefits": {
+        "noContract": "Uzun vadeli sözleşme yok",
+        "instantPayouts": "Haftalık ödemeler",
+        "support": "7/24 antrenör desteği"
+      }
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 FitTrackPro. Tüm hakları saklıdır.",
+    "links": {
+      "privacy": "Gizlilik Politikası",
+      "terms": "Hizmet Şartları",
+      "contact": "Bize Ulaşın"
+    }
+  }
+}
