@@ -1,1 +1,36 @@
 @import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: #4C81BD;
+  --color-primary-hover: #304385;
+  --color-primary-light: #4C81BD;
+  --color-primary-dark: #3E97FF;
+  --color-primary-text: #1E3250;
+
+  --color-primary-50: #F0F7FF;
+  --color-primary-100: #E0F2FE;
+  --color-primary-200: #BAE6FD;
+  --color-primary-300: #7DD3FC;
+  --color-primary-400: #38BDF8;
+  --color-primary-500: #27548A;
+  --color-primary-600: #1E3A8A;
+  --color-primary-700: #1E40AF;
+  --color-primary-800: #1E3A87;
+  --color-primary-900: #1E3A76;
+
+
+  --color-background-light: #F7F9FC;
+  --color-background-dark: #3C3D37;
+
+  --color-header-light: #F7F9FC;
+  --color-header-dark: #222222;
+
+  --color-success: #22C55E;
+  --color-success-light: #DCFCE7;
+  --color-error: #EF4444;
+  --color-error-light: #FEE2E2;
+  --color-warning: #F59E0B;
+  --color-warning-light: #FEF3C7;
+}
