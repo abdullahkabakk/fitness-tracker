@@ -1,0 +1,80 @@
+export const coaches = [
+  {
+    id: 1,
+    name: 'Sarah Johnson',
+    avatar: "https://randomuser.me/api/portraits/women/52.jpg",
+    banner: "https://picsum.photos/id/1013/800/200",
+    featured: true,
+    specialties: ['weightTraining', 'nutrition', 'crossFit'],
+    rating: 5,
+    reviewCount: 127,
+    monthlyPrice: 49,
+    planDescription: 'Personalized workouts, meal plans, and weekly check-ins',
+    available: true
+  },
+  {
+    id: 2,
+    name: 'Mike Reynolds',
+    avatar: "https://randomuser.me/api/portraits/men/52.jpg",
+    banner: "https://picsum.photos/id/1012/800/200",
+    featured: false,
+    specialties: ['crossFit', 'calisthenics', 'nutrition'],
+    rating: 4,
+    reviewCount: 89,
+    monthlyPrice: 39,
+    planDescription: 'CrossFit programming and nutrition guidance',
+    available: true
+  },
+  {
+    id: 3,
+    name: 'Emma Chen',
+    avatar: "https://randomuser.me/api/portraits/women/12.jpg",
+    banner: "https://picsum.photos/id/1010/800/200",
+    featured: false,
+    specialties: ['yoga', 'weightTraining', 'crossFit'],
+    rating: 5,
+    reviewCount: 112,
+    monthlyPrice: 35,
+    planDescription: 'Yoga sequences and meditation practices',
+    available: true
+  },
+  {
+    id: 4,
+    name: 'James Wilson',
+    banner: "https://picsum.photos/id/1011/800/200",
+    avatar: "https://randomuser.me/api/portraits/men/12.jpg",
+    featured: true,
+    specialties: ['yoga', 'crossFit', 'cardio'],
+    rating: 5,
+    reviewCount: 156,
+    monthlyPrice: 59,
+    planDescription: 'Custom bodybuilding plans with video analysis',
+    available: true
+  },
+  {
+    id: 5,
+    name: 'Aisha Patel',
+    avatar: "https://randomuser.me/api/portraits/women/22.jpg",
+    banner: "https://picsum.photos/id/1015/800/200",
+    featured: false,
+    specialties: ['cardio', 'weightTraining', 'yoga'],
+    rating: 4,
+    reviewCount: 72,
+    monthlyPrice: 45,
+    planDescription: 'Weight loss focused training and nutrition',
+    available: true
+  },
+  {
+    id: 6,
+    name: 'David Rodriguez',
+    avatar: "https://randomuser.me/api/portraits/men/74.jpg",
+    banner: "https://picsum.photos/id/1018/800/200",
+    featured: false,
+    specialties: ['calisthenics', 'nutrition', 'crossFit'],
+    rating: 5,
+    reviewCount: 94,
+    monthlyPrice: 42,
+    planDescription: 'Bodyweight mastery and movement coaching',
+    available: true
+  }
+];

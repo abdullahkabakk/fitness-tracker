@@ -1,3 +1,454 @@
 {
+  "common": {
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "savePercent": "Save {percent}%",
+    "all": "All",
+    "topCoach": "Top Coach",
+    "year": "Year",
+    "mo": "mo",
+    "saveYearly": "Save ${amount} when you pay yearly"
+  },
+  "nav": {
+    "features": "Features",
+    "pricing": "Pricing",
+    "login": "Login",
+    "register": "Register",
+    "coachLogin": "Coach Login",
+    "studentLogin": "Student Login",
+    "coachRegister": "Coach Register",
+    "studentRegister": "Student Register",
+    "coaches": "For Coaches",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "getStarted": "Get Started"
+  },
+  "home": {
+    "hero": {
+      "title": "Transform Your Fitness Journey",
+      "subtitle": "Track your progress, connect with coaches, and achieve your fitness goals with our all-in-one platform.",
+      "startTrial": "Start Free Trial",
+      "coachLogin": "Coach Login",
+      "trustedBy": "Trusted by thousands of fitness enthusiasts and coaches worldwide",
+      "activeCoaches": "Active Coaches"
+    },
+    "features": {
+      "title": "Key Features",
+      "subtitle": "Our platform connects fitness enthusiasts with professional coaches through customizable subscription packages.",
+      "highlight": {
+        "forUsers": "For Users",
+        "findPerfectCoach": "Find your perfect coach and subscribe to their expertise",
+        "browseThrough": "Browse through profiles of certified fitness coaches specializing in various disciplines. Choose a coach and subscription package that aligns with your goals.",
+        "compareCoaches": "Compare coach profiles and specializations",
+        "readReviews": "Read reviews from other subscribers",
+        "chooseCoaches": "Choose coaches based on your fitness goals",
+        "forCoaches": "For Coaches",
+        "buildSustainableBusiness": "Build a sustainable coaching business online",
+        "createCustomPackages": "Create custom subscription packages for your clients, manage their progress, and receive automatic payments. Focus on coaching while we handle the business side.",
+        "designOffer": "Design and offer your own subscription packages to clients. Set your own prices and feature sets based on your expertise and coaching style.",
+        "manageClients": "Manage your clients and track their progress",
+        "receivePayments": "Receive payments automatically through our secure platform"
+      },
+      "tracking": {
+        "title": "Real-time Tracking",
+        "description": "Monitor steps, calories, and workouts in real-time with detailed analytics"
+      },
+      "coaching": {
+        "title": "Coach Dashboard",
+        "description": "Professional tools for coaches to manage clients and track progress"
+      },
+      "goals": {
+        "title": "Goal Setting",
+        "description": "Set and achieve personalized fitness goals with smart reminders"
+      },
+      "community": {
+        "title": "Community Support",
+        "description": "Connect with like-minded individuals and share your fitness journey"
+      }
+    },
+    "pricing": {
+      "title": "Simple Pricing",
+      "getStarted": "Get Started",
+      "plans": {
+        "basic": {
+          "name": "Basic",
+          "price": "9",
+          "features": {
+            "tracking": "Step Tracking",
+            "calories": "Calorie Counter",
+            "goals": "Basic Goals",
+            "coaching": "1 Coach Connection"
+          }
+        },
+        "pro": {
+          "name": "Pro",
+          "price": "29",
+          "features": {
+            "tracking": "Advanced Tracking",
+            "calories": "Calorie Counter",
+            "goals": "Custom Goals",
+            "coaching": "3 Coach Connections",
+            "community": "Access to Community"
+          }
+        },
+        "enterprise": {
+          "name": "Enterprise",
+          "price": "99",
+          "features": {
+            "tracking": "All Tracking Features",
+            "calories": "Calorie Counter",
+            "goals": "Custom Goals",
+            "coaching": "Unlimited Coach Connections",
+            "community": "Access to Community"
+          }
+        }
+      }
+    },
+    "testimonials": {
+      "title": "Success Stories",
+      "subtitle": "Hear from our users who have transformed their fitness journey with FitJourney",
+      "brands_title": "Trusted by fitness professionals worldwide",
+      "items":
+        {
+          "quote1": "FitJourney has been a game-changer for my fitness journey. The ability to connect directly with coaches and their custom plans has kept me accountable and motivated.",
+          "name1": "James Wilson",
+          "title1": "FitJourney User",
+          "quote2": "Finding the right coach was so easy with FitJourney. I could compare different packages and choose what worked for my budget and fitness goals.",
+          "name2": "Emily Parker",
+          "title2": "Marathon Runner",
+          "quote3": "The subscription model is brilliant. My coach creates personalized workouts and nutrition plans, and I can track everything in one place.",
+          "name3": "Michael Thompson",
+          "title3": "Weight Loss Journey"
+        }
+    },
+    "blog": {
+        "title": "Latest Articles",
+        "subtitle": "Stay updated with the latest fitness trends and tips",
+        "readMore": "Read More",
+        "articles": {
+          "firstBlog": {
+            "title": "5 Tips for Staying Motivated in Your Fitness Journey",
+            "description": "Staying motivated can be challenging. Here are five tips to keep you on track with your fitness goals."
+          },
+          "secondBlog": {
+            "title": "The Benefits of Working with a Personal Coach",
+            "description": "Discover how a personal coach can help you achieve your fitness goals faster and more effectively."
+          },
+          "thirdBlog": {
+            "title": "Nutrition Tips for Optimal Performance",
+            "description": "Learn about the best nutrition practices to fuel your workouts and enhance recovery."
+          }
+      }
+    },
+    "cta": {
+      "title": "Ready to Transform Your Fitness Journey?",
+        "subtitle": "Join thousands of satisfied users and coaches on our platform",
+      "startButton": "Start Free Trial",
+        "learnMore": "Learn More"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+        "subtitle": "Everything you need to know about our platform",
+      "stillHaveQuestions": "Still have questions? Don't hesitate to reach out to us.",
+        "contactUs": "Contact Us",
+      "questions": {
+        "pricing": {
+          "question": "What are the subscription costs?",
+          "answer": "We don't charge any upfront fees. Our subscription plans start at $9/month for basic features, with options to upgrade for more advanced tools and coaching connections."
+        },
+        "cancellation": {
+          "question": "Can I cancel my subscription?",
+          "answer": "Yes, you can cancel your subscription at any time. You will continue to have access to your plan until the end of your billing cycle."
+        },
+        "coaches": {
+          "question": "How do I find a coach?",
+          "answer": "You can browse through our list of certified coaches, filter by specialty, and read reviews from other users to find the perfect match for your fitness goals."
+        },
+        "tracking": {
+          "question": "How does the tracking feature work?",
+          "answer": "Our platform allows you to track your steps, calories burned, and workouts in real-time. You can set goals and receive reminders to keep you on track."
+        },
+        "coaching": {
+          "question": "How do I connect with a coach?",
+          "answer": "Once you find a coach you like, you can subscribe to their package. This will give you access to their coaching services and personalized plans."
+        },
+        "support": {
+          "question": "What kind of support do you offer?",
+          "answer": "We provide 24/7 customer support through chat and email. Our team is here to help you with any questions or issues you may have."
+        }
+      }
+    },
+    "progressStories": {
+      "title": "Real People, Real Results",
+      "realResults": "Real Results",
+      "realPeople": "Real People",
+      "subtitle": "Join thousands who transformed their lives with FitJourney. See what's possible in just weeks!",
+      "trustedByMany": "Trusted by thousands of fitness enthusiasts and coaches worldwide",
+      "transformation": "Transformations",
+      "satisfactionRate": "Satisfaction Rate",
+      "averageRating": "Average Rating",
+      "weightLost": "Weight Lost",
+      "timeFrame": "Time Frame",
+      "workouts": "Workouts",
+      "before": "Before",
+      "after": "After",
+      "seeFullStory": "See {name}'s Full Story",
+      "stories": {
+        "emily": {
+          "weightLost": "Lost 12 kg",
+          "duration": "12 weeks",
+          "sessions": "84 sessions",
+          "quote": "I never thought I could achieve this level of fitness. The personalized coaching and support from FitJourney made all the difference."
+        },
+        "jake": {
+          "weightLost": "Lost 8 kg",
+            "duration": "8 weeks",
+            "sessions": "56 sessions",
+            "quote": "I was skeptical at first, but the results speak for themselves. I feel stronger and more confident than ever."
+        }
+      }
+    },
+    "coaches": {
+      "title": "Join Our Community of Coaches",
+        "subtitle": "Become a part of our growing network of fitness professionals",
+      "specialities": {
+        "weightTraining": "Weight Training",
+        "nutrition": "Nutrition",
+        "yoga": "Yoga",
+        "cardio": "Cardio",
+        "crossFit": "CrossFit",
+        "calisthenics": "Calisthenics"
+      },
+      "testimonial": {
+        "review": "Working with Coach Sarah has been life-changing. Her personalized nutrition plans and workout routines helped me lose 30 pounds in just 3 months. The FitJourney platform makes it so easy to track progress and communicate with my coach.",
+        "progress": "Lost 30 lbs in 3 months with Coach Sarah"
+      }
+    }
+  },
+  "coaches": {
+    "title": "Become a Coach",
+    "subtitle": "Join our community of fitness professionals and grow your coaching business",
+    "viewAll": "View All Coaches",
+    "coachRegister": "Coach Register",
+    "coachLogin": "Coach Login",
+    "hero": {
+      "title": "Become a Top Fitness Coach",
+      "subtitle": "Reach more clients and grow your business with our platform. Join thousands of successful coaches who have transformed their careers.",
+      "startTrial": "Start Free Trial",
+      "coachLogin": "Coach Login",
+      "trustedBy": "Trusted by",
+      "activeCoaches": "Active Coaches",
+      "stats": {
+        "activeCoaches": "Active Coaches",
+        "users": "Users",
+        "earnings": "Avg. Monthly Earnings"
+      }
+    },
+    "features": {
+      "title": "All-In-One Coaching Platform",
+      "subtitle": "Everything you need to successfully run your coaching business online",
+      "cards": {
+        "dashboard": {
+          "title": "Coach Dashboard",
+          "description": "Get a complete overview of your coaching business with our intuitive dashboard"
+        },
+        "subscriptions": {
+          "title": "Custom Subscriptions",
+          "description": "Create and manage personalized subscription packages for your clients"
+        },
+        "analytics": {
+          "title": "Performance Analytics",
+          "description": "Track client progress and business metrics with powerful analytics tools"
+        },
+        "messaging": {
+          "title": "Client Messaging",
+          "description": "Keep in touch with your clients through our secure messaging system"
+        },
+        "workouts": {
+          "title": "Workout Management",
+          "description": "Create, assign, and track client workouts and fitness programs"
+        },
+        "scheduling": {
+          "title": "Smart Scheduling",
+          "description": "Manage your availability and let clients book sessions easily"
+        }
+      },
+      "tabs": {
+        "dashboard": {
+          "title": "Dashboard",
+          "contentTitle": "Your Coaching Business at a Glance",
+          "contentDescription": "Get a complete overview of your coaching business with our intuitive dashboard designed specifically for fitness professionals.",
+          "points": {
+            "overview": "Real-time overview of active clients, revenue, and upcoming sessions",
+            "clients": "Client activity feed and engagement metrics",
+            "revenue": "Monthly and annual revenue projections",
+            "customization": "Customizable widgets to focus on what matters most to you"
+          }
+        },
+        "payments": {
+          "title": "Payments",
+          "contentTitle": "Seamless Payment Processing",
+          "contentDescription": "Our platform handles all the payment complexity so you can focus on coaching and growing your business.",
+          "points": {
+            "subscriptions": "Create multiple subscription tiers with different pricing and features",
+            "payouts": "Automatic weekly or monthly payouts directly to your bank account",
+            "autoRenewal": "Hassle-free subscription renewals and payment reminders",
+            "invoicing": "Automated invoicing and payment receipts for your clients"
+          }
+        },
+        "clients": {
+          "title": "Client Management",
+          "contentTitle": "Streamlined Client Experience",
+          "contentDescription": "Provide an exceptional coaching experience with our comprehensive client management features.",
+          "points": {
+            "profiles": "Detailed client profiles with fitness history and goals",
+            "progress": "Progress tracking with measurements, photos, and performance metrics",
+            "messaging": "Direct messaging and file sharing with clients",
+            "assignments": "Assign workouts, nutrition plans, and other tasks to clients"
+          }
+        }
+      },
+      "details": {
+        "security": {
+          "title": "Secure Payments",
+          "description": "Industry-standard payment processing with encryption and fraud protection"
+        },
+        "payments": {
+          "title": "Subscription Management",
+          "description": "Create and manage custom subscription packages with flexible pricing"
+        },
+        "messaging": {
+          "title": "In-App Messaging",
+          "description": "Communicate directly with clients through our secure messaging platform"
+        },
+        "analytics": {
+          "title": "Client Analytics",
+          "description": "Track client progress and performance with detailed analytics and reports"
+        },
+        "customization": {
+          "title": "Customizable Dashboard",
+          "description": "Personalize your dashboard to focus on what matters most to your business"
+        },
+        "support": {
+          "title": "24/7 Support",
+          "description": "Get help anytime with our dedicated customer support team"
+        }
+      }
+    },
 
+    "howItWorks": {
+      "title": "How It Works",
+      "subtitle": "Get started in just a few simple steps",
+      "getStartedButton": "Get Started Now",
+      "tagline": "For Coaches",
+      "learnMore": "Learn More",
+      "steps": {
+        "signup": {
+          "title": "Create Your Account",
+          "description": "Sign up as a coach and complete your profile with specialties and experience"
+        },
+        "packages": {
+          "title": "Set Up Packages",
+          "description": "Create your coaching packages with custom features and pricing"
+        },
+        "clients": {
+          "title": "Invite Clients",
+          "description": "Invite existing clients or get discovered by new ones on our platform"
+        },
+        "earnings": {
+          "title": "Get Paid",
+          "description": "Receive automatic payouts as your clients subscribe to your services"
+        }
+      }
+    },
+    "calculator": {
+      "title": "Income Calculator",
+      "subtitle": "See how much you could earn as a coach on our platform",
+      "estimate": "Estimate Your Earnings",
+      "numberOfClients": "Number of Clients",
+      "subscriptionPrice": "Monthly Subscription Price",
+      "retentionRate": "Client Retention Rate",
+      "potentialEarnings": "Your Potential Earnings",
+      "monthly": "Monthly Income",
+      "annual": "Annual Income",
+      "fiveYear": "5-Year Income",
+      "disclaimer": "These figures are estimates based on your inputs and a platform fee of 10%. Actual results may vary.",
+      "platformFee": "Our platform fee is only 10% of subscription revenue, with no hidden costs.",
+      "startButton": "Start Earning Now"
+    },
+    "testimonials": {
+      "title": "Coaches Love Our Platform",
+      "subtitle": "Hear from fitness professionals who have transformed their coaching business",
+      "joinButton": "Join These Successful Coaches"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about coaching on our platform",
+      "moreQuestions": "Have more questions?",
+      "contactButton": "Contact Us",
+      "questions": {
+        "pricing": {
+          "question": "How much does it cost to use the platform?",
+          "answer": "There's no upfront cost to join. We take a 10% commission on subscriptions you sell through the platform. No monthly fees, no hidden charges."
+        },
+        "start": {
+          "question": "How quickly can I start earning?",
+          "answer": "You can set up your profile and subscription packages in less than 30 minutes. Once approved, you can start inviting clients and earning immediately."
+        },
+        "payout": {
+          "question": "When and how do I get paid?",
+          "answer": "We process payouts every week for all subscription revenue. You can choose to receive payments via direct deposit, PayPal, or Stripe."
+        },
+        "requirements": {
+          "question": "What qualifications do I need to become a coach?",
+          "answer": "While we don't require specific certifications, we do review all coach applications. Having recognized fitness certifications will help your application and build client trust."
+        },
+        "support": {
+          "question": "What kind of support do you offer to coaches?",
+          "answer": "We provide 24/7 technical support, a comprehensive knowledge base, and regular webinars on how to maximize your coaching business. Plus, you'll join our community of fitness professionals."
+        },
+        "clients": {
+          "question": "Can I bring my existing clients to the platform?",
+          "answer": "Absolutely! We make it easy to invite your existing clients. You'll also have the opportunity to be discovered by new clients searching for coaches on our platform."
+        },
+        "security": {
+          "question": "Is my data secure?",
+          "answer": "Yes, we take data security seriously. Our platform uses industry-standard encryption and security protocols to protect your information and your clients' data."
+        }
+      }
+    },
+    "cta": {
+      "title": "Take your training business to the next level",
+      "description": "Our all-in-one platform helps you manage clients, sell subscriptions, and track progress - all in one place.",
+      "signup": "Start Your Free Trial",
+      "learnMore": "See How It Works"
+    }
+  },
+  "footer": {
+    "description": "Your fitness companion for a healthier journey.",
+    "copyright": "© 2025 FitJourney. All rights reserved.",
+    "company": {
+      "name": "Company",
+      "aboutUs": "About Us",
+      "careers": "Careers",
+      "blog": "Blog",
+      "press": "Press"
+    },
+    "resources": {
+      "name": "Resources",
+      "helpCenter": "Help Center",
+      "fitnessGuides": "Fitness Guides",
+      "coachResources": "Coach Resources",
+      "apiDocs": "API Documentation"
+    },
+    "legal": {
+      "name": "Legal"
+    },
+    "links": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "contact": "Contact Us",
+      "gdpr": "GDPR"
+    }
+  }
 }
