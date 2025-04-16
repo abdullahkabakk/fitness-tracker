@@ -1,6 +1,6 @@
 <template>
   <div class="flex items-start gap-3">
-    <div class="p-2 bg-purple-100 dark:bg-gray-700 rounded-lg text-purple-600 dark:text-purple-400">
+    <div class="p-2 bg-primary-100 dark:bg-gray-700 rounded-lg text-primary-600 dark:text-primary-400">
       <Icon :icon="icon" class="text-xl" />
     </div>
     <div>

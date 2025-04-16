@@ -1,5 +1,5 @@
 <template>
-  <section id="features" class="py-20 bg-gradient-to-t from-white to-primary-50 dark:from-gray-900 dark:to-gray-800">
+  <section id="features" class="pb-20 bg-gradient-to-t from-white to-primary-50 dark:from-gray-900 dark:to-gray-800">
     <div class="max-w-7xl mx-auto px-4 py-6 lg:px-8 lg:py-10">
       <SectionTitleSubtitle
         :title="$t('home.features.title')"

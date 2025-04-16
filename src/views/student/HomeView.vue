@@ -159,14 +159,12 @@
             </div>
 
             <div class="space-y-4">
-              <div v-for="trainer in personalTrainers" :key="trainer.id"
+              <div v-for="(trainer, idx) in personalTrainers" :key="trainer.id"
                    class="bg-gray-50 rounded-xl overflow-hidden transition-all hover:bg-gray-100">
                 <div class="flex items-center p-4">
                   <div class="w-12 h-12 rounded-full overflow-hidden mr-4 border-2 border-white">
                     <img v-if="trainer.avatar" :src="trainer.avatar" class="w-full h-full object-cover" alt="Trainer avatar" />
-                    <div v-else class="w-full h-full bg-indigo-500 flex items-center justify-center">
-                      <span class="text-white text-lg font-bold">{{ trainer.name.charAt(0) }}</span>
-                    </div>
+                    <img v-else :src="`https://randomuser.me/api/portraits/${idx%2 == 0 ? 'men' : 'women'}/${12+idx}.jpg`" :alt="trainer.name">
                   </div>
                   <div class="flex-1">
                     <div class="flex items-center justify-between">
@@ -358,7 +356,7 @@
           </div>
           <div class="space-y-4">
             <div
-              v-for="message in messages"
+              v-for="(message, idx) in messages"
               :key="message.id"
               class="p-4 bg-gray-50 rounded-xl transition-all hover:bg-gray-100 cursor-pointer relative"
               :class="{'border-l-4 border-blue-500': !message.read}"
@@ -366,9 +364,7 @@
               <div class="flex items-start mb-3">
                 <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
                   <img v-if="message.avatar" :src="message.avatar" class="w-full h-full object-cover" alt="Coach avatar" />
-                  <div v-else class="w-full h-full bg-blue-500 flex items-center justify-center">
-                    <span class="text-white text-lg font-bold">{{ message.trainer.charAt(0) }}</span>
-                  </div>
+                  <img v-else :src="`https://randomuser.me/api/portraits/${idx%2 == 0 ? 'men' : 'women'}/${12+idx}.jpg`" :alt="message.trainer">
                 </div>
                 <div class="flex-1">
                   <div class="flex items-center justify-between">
@@ -595,19 +591,6 @@ const personalTrainers = ref([
     }
   }
 ])
-
-// // Helper function for gradient classes
-// const getGradientClass = (tier) => {
-//   switch(tier) {
-//     case 'premium':
-//       return 'from-indigo-700 to-purple-900';
-//     case 'standard':
-//       return 'from-blue-700 to-indigo-800';
-//     case 'basic':
-//     default:
-//       return 'from-blue-600 to-blue-800';
-//   }
-// }
 
 // Chart Data
 const activePeriod = ref('week')

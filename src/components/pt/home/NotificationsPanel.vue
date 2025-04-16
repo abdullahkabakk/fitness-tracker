@@ -65,7 +65,7 @@ const progressUpdates = [
         class="group p-4 rounded-lg border-l-4 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md"
         :class="[notification.className, 'relative overflow-hidden']"
       >
-        <div class="absolute right-2 top-2 opacity-20 group-hover:opacity-40 transition-opacity">
+        <div class="absolute right-2 top-2 opacity-5 group-hover:opacity-40 transition-opacity">
           <Icon :icon="notification.icon" class="w-12 h-12" />
         </div>
         <div class="flex items-start gap-3 relative">

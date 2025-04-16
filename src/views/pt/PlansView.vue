@@ -191,9 +191,18 @@
 
     <!-- FAQ Section -->
     <Card>
+      <div class="flex w-full">
       <h3 class="text-lg md:text-xl font-semibold mb-6 text-primary-text dark:text-white">
         {{ $t('plans.faq.title') }}
       </h3>
+        <button
+          @click="toggleFaq(null)"
+          class="bg-primary-50 dark:bg-gray-700 text-primary dark:text-primary-400 rounded-lg cursor-pointer px-4 ml-auto text-sm flex items-center gap-1.5 mb-4"
+        >
+          Edit
+          <Icon icon="mdi:edit" />
+        </button>
+      </div>
       <div class="space-y-4">
         <div v-for="(faq, index) in faqs" :key="index" class="border-b border-gray-200 dark:border-gray-700 pb-4 last:border-0">
           <button

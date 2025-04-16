@@ -4,7 +4,7 @@ import TransformationsGrid from '@/components/home/progress-stories/Transformati
 </script>
 
 <template>
-  <section class="py-20 bg-gradient-to-t from-white to-primary-50 dark:from-gray-900 dark:to-gray-800">
+  <section class="pb-20 bg-gradient-to-t from-white to-primary-50 dark:from-gray-900 dark:to-gray-800">
     <div class="max-w-7xl mx-auto px-4 py-6 lg:px-8 lg:py-10">
       <div class="text-center mb-16">
         <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">

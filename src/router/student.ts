@@ -12,7 +12,7 @@ export const studentRoutes = [
   {
     path: StudentRoutes.activityLog,
     name: StudentRouteNames.activityLog,
-    component: () => import('@/views/student/WorkoutView.vue'),
+    component: () => import('@/views/student/ActivityLog.vue'),
     meta: {
       layout: 'StudentLayout',
     },

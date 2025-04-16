@@ -28,12 +28,12 @@ const blogPosts = ref<BlogPost[]>([
     content: "Progressive overload is the gradual increase of stress placed upon the body during exercise training...",
     author: {
       name: "Alex Johnson",
-      avatar: "/api/placeholder/80/80",
+      avatar: "https://images.unsplash.com/photo-1550346935-663d7f1a9244?auto=format&fit=crop&w=80&h=80&q=80&crop=faces",
       role: "Head Fitness Coach"
     },
     category: "Strength Training",
     tags: ["muscle growth", "strength", "workout tips"],
-    imageUrl: "/api/placeholder/800/500",
+    imageUrl: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=800&h=500&q=80",
     publishedAt: "2025-03-15T08:00:00.000Z",
     readTime: 7,
     likes: 243
@@ -45,12 +45,12 @@ const blogPosts = ref<BlogPost[]>([
     content: "Creating effective nutrition plans is only half the battle. The real challenge is helping clients stick to them...",
     author: {
       name: "Sophia Rodriguez",
-      avatar: "/api/placeholder/80/80",
+      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=80&h=80&q=80&crop=faces",
       role: "Nutrition Specialist"
     },
     category: "Nutrition",
     tags: ["meal planning", "client success", "habits"],
-    imageUrl: "/api/placeholder/800/500",
+    imageUrl: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=800&h=500&q=80",
     publishedAt: "2025-03-10T10:30:00.000Z",
     readTime: 5,
     likes: 187
@@ -62,12 +62,12 @@ const blogPosts = ref<BlogPost[]>([
     content: "Fitness plateaus are inevitable in every client's journey. Here's how to help them break through...",
     author: {
       name: "Marcus Wei",
-      avatar: "/api/placeholder/80/80",
+      avatar: "https://images.unsplash.com/photo-1569443693539-175ea9f007e8?auto=format&fit=crop&w=80&h=80&q=80&crop=faces",
       role: "Motivation Coach"
     },
     category: "Client Management",
     tags: ["motivation", "plateaus", "coaching"],
-    imageUrl: "/api/placeholder/800/500",
+    imageUrl: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&h=500&q=80",
     publishedAt: "2025-03-05T09:15:00.000Z",
     readTime: 6,
     likes: 156
@@ -79,12 +79,12 @@ const blogPosts = ref<BlogPost[]>([
     content: "In today's digital age, having a strong social media presence is crucial for personal trainers...",
     author: {
       name: "Jasmine Taylor",
-      avatar: "/api/placeholder/80/80",
+      avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=80&h=80&q=80&crop=faces",
       role: "Business Development"
     },
     category: "Business Growth",
     tags: ["social media", "marketing", "business"],
-    imageUrl: "/api/placeholder/800/500",
+    imageUrl: "https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?auto=format&fit=crop&w=800&h=500&q=80",
     publishedAt: "2025-02-28T11:45:00.000Z",
     readTime: 8,
     likes: 219
@@ -96,12 +96,12 @@ const blogPosts = ref<BlogPost[]>([
     content: "Recovery is just as important as training when it comes to athletic performance...",
     author: {
       name: "David Chen",
-      avatar: "/api/placeholder/80/80",
+      avatar: "https://images.unsplash.com/photo-1571019613454-1cb2f99badd6?auto=format&fit=crop&w=80&h=80&q=80&crop=faces",
       role: "Performance Specialist"
     },
     category: "Recovery",
     tags: ["recovery", "athletes", "performance"],
-    imageUrl: "/api/placeholder/800/500",
+    imageUrl: "https://images.unsplash.com/photo-1576678927484-cc907957088c?auto=format&fit=crop&w=800&h=500&q=80",
     publishedAt: "2025-02-20T14:00:00.000Z",
     readTime: 6,
     likes: 201
@@ -113,12 +113,12 @@ const blogPosts = ref<BlogPost[]>([
     content: "Heart rate training is one of the most effective methods for improving cardiovascular fitness...",
     author: {
       name: "Emma Wilson",
-      avatar: "/api/placeholder/80/80",
+      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=80&h=80&q=80&crop=faces",
       role: "Endurance Coach"
     },
     category: "Cardio",
     tags: ["heart rate", "endurance", "cardio"],
-    imageUrl: "/api/placeholder/800/500",
+    imageUrl: "https://images.unsplash.com/photo-1571008887538-b36bb32f4571?auto=format&fit=crop&w=800&h=500&q=80",
     publishedAt: "2025-02-15T16:30:00.000Z",
     readTime: 7,
     likes: 178
@@ -181,9 +181,9 @@ const popularTags = computed(() => {
     <header class="bg-gradient-to-r mt-22 from-primary to-blue-500 dark:from-primary-900 dark:to-blue-800 text-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div class="text-center">
-          <h1 class="text-4xl md:text-5xl font-bold mb-4">Fitness Coach Insights</h1>
-          <p class="text-xl md:text-2xl max-w-3xl mx-auto opacity-90">
-            Expert tips and strategies to help personal trainers elevate their coaching and grow their business
+          <h1 class="text-2xl md:text-3xl font-bold mb-4">Coaching Smarter, Growing Stronger</h1>
+          <p class="md:text-lg max-w-3xl mx-auto opacity-90">
+            Stay ahead with expert-backed strategies in training, recovery, and nutrition—designed to help you coach with confidence and drive client success.
           </p>
         </div>
       </div>
@@ -199,7 +199,7 @@ const popularTags = computed(() => {
             <div class="md:flex">
               <div class="md:w-1/2">
                 <img
-                  src="https://picsum.photos/id/1013/800/200"
+                  :src="featuredPost.imageUrl"
                   :alt="featuredPost.title"
                   class="h-64 md:h-full w-full object-cover"
                 >
@@ -296,7 +296,7 @@ const popularTags = computed(() => {
               class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg"
             >
               <img
-                :src="`https://picsum.photos/id/${idx + 1010}/800/200`"
+                :src="post.imageUrl"
                 :alt="post.title"
                 class="h-48 w-full object-cover"
               >
@@ -320,8 +320,7 @@ const popularTags = computed(() => {
                 <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm line-clamp-3">{{ post.excerpt }}</p>
                 <div class="flex items-center">
                   <img
-                       :src="`https://picsum.photos/id/${44 + idx}/200/200`"
-
+                       :src="`https://randomuser.me/api/portraits/${idx%2 == 0 ? 'men' : 'women'}/${6+idx}.jpg`"
                        :alt="post.author.name" class="w-8 h-8 rounded-full">
                   <span class="ml-2 text-sm text-gray-700 dark:text-gray-300">{{ post.author.name }}</span>
                 </div>
@@ -360,7 +359,7 @@ const popularTags = computed(() => {
         </section>
 
         <!-- Newsletter Section -->
-        <section class="bg-gradient-to-r from-primary to-blue-500 rounded-2xl p-8 text-white dark:bg-primary-900 dark:to-blue-800">
+        <section class="bg-gradient-to-r from-primary to-blue-500 rounded-2xl p-8 text-white dark:from-primary-800 dark:to-primary-900">
           <div class="md:flex items-center">
             <div class="md:w-2/3 mb-6 md:mb-0">
               <h2 class="text-2xl font-bold mb-2">Stay Updated</h2>
