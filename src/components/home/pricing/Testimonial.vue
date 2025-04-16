@@ -30,7 +30,7 @@ import { Icon } from '@iconify/vue'
         <div>
           <p class="font-medium text-gray-900 dark:text-white">Michael Thompson</p>
           <p class="text-sm text-gray-500 dark:text-gray-400">
-            {{ $t('home.coaches.testimonial.progress') }}}
+            {{ $t('home.coaches.testimonial.progress') }}
           </p>
         </div>
       </div>

@@ -3,7 +3,7 @@
     class="pt-32 pb-20 bg-gradient-to-b from-white to-primary-50 dark:from-gray-900 dark:to-gray-800"
   >
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center px-4 py-6 lg:px-8 lg:py-10">
-      <div class="md:w-3/5 lg:w-1/3 mb-12 md:mb-0">
+      <div class="md:w-3/5 lg:w-1/3 mr-4 mb-12 md:mb-0">
         <h1
           class="text-4xl sm:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-primary-dark dark:from-primary-light dark:to-blue-400 bg-clip-text text-transparent"
         >

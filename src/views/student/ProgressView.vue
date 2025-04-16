@@ -359,13 +359,13 @@
 
           <div class="space-y-4">
             <div
-              v-for="message in messages"
+              v-for="(message, idx) in messages"
               :key="message.id"
               class="p-4 bg-gray-50 rounded-xl transition-all hover:bg-gray-100 cursor-pointer"
             >
               <div class="flex items-start">
                 <img
-                  :src="message.avatar || '/api/placeholder/40/40'"
+                  :src="`https://randomuser.me/api/portraits/${idx%2 == 0 ? 'men' : 'women'}/${32+idx}.jpg`"
                   alt="Trainer avatar"
                   class="w-10 h-10 rounded-full object-cover mr-3"
                 />
@@ -606,10 +606,22 @@ const selectedPhotoDate = ref('April 16, 2025')
 const photoDates = ref(['March 15, 2025', 'March 31, 2025', 'April 16, 2025'])
 
 const progressPhotos = ref([
-  { angle: 'Front View', date: 'April 16, 2025', url: '/api/placeholder/200/200' },
-  { angle: 'Side View', date: 'April 16, 2025', url: '/api/placeholder/200/200' },
-  { angle: 'Back View', date: 'April 16, 2025', url: '/api/placeholder/200/200' }
-])
+  {
+    angle: 'Front View',
+    date: 'April 16, 2025',
+    url: 'https://images.unsplash.com/photo-1686230399946-8cfdb71f4f07?q=80&w=2728&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+  },
+  {
+    angle: 'Side View',
+    date: 'April 16, 2025',
+    url: 'https://images.unsplash.com/photo-1673872685586-5d06b159f645?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+  },
+  {
+    angle: 'Back View',
+    date: 'April 16, 2025',
+    url: 'https://images.unsplash.com/photo-1742560306866-7a973878b378?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+  }
+]);
 
 const messages = ref([
   {
@@ -668,11 +680,6 @@ const chartOptions = computed<ApexOptions>(() => ({
     toolbar: { show: false },
     fontFamily: 'Inter, sans-serif',
     animations: { enabled: true },
-    events: {
-      mouseMove: function(event, chartContext, config) {
-        // This is handled in the component's showTooltip method
-      }
-    }
   },
   colors: [selectedMetric.value === 'weight' ? '#3B82F6' : selectedMetric.value === 'bodyFat' ? '#EF4444' : '#10B981'],
   dataLabels: { enabled: false },
@@ -698,22 +705,28 @@ const chartOptions = computed<ApexOptions>(() => ({
   }
 }))
 const series = computed(() => {
-  const data: { name: string; data: number[] }[] = [
-    {
+  const metricsData = {
+    weight: {
       name: 'Weight',
       data: [70, 68, 67, 66, 65, 64, 63, 62]
     },
-    {
+    bodyFat: {
       name: 'Body Fat',
       data: [20, 19.5, 19, 18.5, 18, 17.5, 17, 16.5]
     },
-    {
+    muscleMass: {
       name: 'Muscle Mass',
       data: [30, 31, 32, 33, 34, 35, 36, 37]
     }
-  ]
-  return data.find((d) => d.name.toLowerCase() === selectedMetric.value) ? [data.find((d) => d.name.toLowerCase() === selectedMetric.value)] : []
-})
+  };
+
+  // Get the metric key in a type-safe way
+  const metricKey = selectedMetric.value as keyof typeof metricsData;
+
+  // Return the corresponding data or empty array if not found
+  return metricsData[metricKey] ? [metricsData[metricKey]] : [];
+});
+
 const showTooltip = (event: MouseEvent, chartContext: any, config: any) => {
   const { offsetX, offsetY } = event
   const { dataPointIndex } = config

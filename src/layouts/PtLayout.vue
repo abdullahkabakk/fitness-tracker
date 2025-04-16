@@ -2,17 +2,20 @@
 <template>
   <div class="min-h-screen bg-background-light dark:bg-background-dark flex text-gray-800 dark:text-white">
     <!-- Mobile Sidebar -->
-    <div v-if="isSidebarOpen" class="fixed inset-0 bg-black/80 z-10 md:hidden" @click="isSidebarOpen = false" />
+    <div v-if="isSidebarOpen" class="fixed inset-0 bg-black/80 z-30 md:hidden" @click="isSidebarOpen = false" />
 
     <!-- Sidebar -->
     <aside
       class="lg:w-80 max-h-screen"
-      :class="['w-64 bg-white dark:bg-header-dark shadow-md fixed md:sticky z-20 top-0 left-0 md:left-auto npm  overflow-y-auto transition-transform duration-300 flex flex-col',
-isSidebarOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0']">
+      :class="['w-64 bg-white dark:bg-header-dark shadow-md fixed md:sticky z-30 top-0 left-0 md:left-auto npm  overflow-y-auto transition-transform duration-300 flex flex-col',
+isSidebarOpen ? 'translate-x-0 h-full' : '-translate-x-full md:translate-x-0']">
       <div class="p-6 flex items-center justify-between">
-        <RouterLink :to="PtRoutes.home" class="text-xl font-bold text-primary-600 dark:text-primary-400">
-          FitJourney
-        </RouterLink>
+        <router-link :to="PtRoutes.home" class="flex items-center space-x-2">
+          <div class="w-8 h-8 flex items-center justify-center dark:text-white">
+            <Icon icon="fluent:dumbbell-28-regular" class="w-full h-full text-primary" />
+          </div>
+          <span class="text-xl sm:text-2xl font-bold dark:text-white text-primary">FitJourney</span>
+        </router-link>
         <button @click="isSidebarOpen = false" class="md:hidden text-gray-600 dark:text-gray-300">
           <Icon icon="mdi:close" class="text-2xl" />
         </button>
@@ -21,7 +24,7 @@ isSidebarOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0']">
       <div class="px-4 py-2 flex-grow">
         <!-- User Profile Summary -->
         <div class="mb-6 p-3 bg-gray-50 dark:bg-gray-700 rounded-lg flex items-center space-x-3">
-          <img src="https://i.pravatar.cc/40" alt="Profile" class="w-10 h-10 rounded-full border-2 border-primary-500">
+          <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="Profile" class="w-10 h-10 rounded-full border-2 border-primary-500">
           <div class="flex-1 min-w-0">
             <p class="text-sm font-medium truncate">Coach Alex</p>
             <p class="text-xs text-gray-500 dark:text-gray-400 truncate">Premium Coach</p>
@@ -62,7 +65,7 @@ isSidebarOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0']">
     <!-- Main content -->
     <div class="flex-1 flex flex-col ">
       <!-- Navbar -->
-      <header class="h-16 md:sticky z-20 top-0 left-0 bg-white dark:bg-header-dark shadow-sm flex items-center justify-between px-6">
+      <header class="h-16 sticky z-20 top-0 left-0 bg-white dark:bg-header-dark shadow-sm flex items-center justify-between px-6">
         <div class="flex items-center gap-4">
           <button @click="isSidebarOpen = !isSidebarOpen" class="md:hidden text-gray-600 dark:text-gray-300">
             <Icon icon="mdi:menu" class="text-2xl" />
@@ -100,7 +103,8 @@ isSidebarOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0']">
               <div class="p-4 border-b border-gray-100 dark:border-gray-700">
                 <div class="flex items-center justify-between">
                   <h4 class="font-semibold">{{ $t('notifications.title') }}</h4>
-                  <button class="text-primary-600 text-sm">{{ $t('notifications.markAll') }}</button>
+                  <button @click="isNotifOpen = false; unreadNotifications = 0"
+                          class="text-primary-600 dark:text-primary-400 text-sm cursor-pointer">{{ $t('notifications.markAll') }}</button>
                 </div>
               </div>
               <div class="max-h-96 overflow-y-auto">
@@ -123,7 +127,7 @@ isSidebarOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0']">
               <div class="w-full mt-auto h-1/2 bg-white dark:bg-header-dark p-4 overflow-y-auto">
                 <div class="flex items-center justify-between border-b border-gray-200 dark:border-gray-700 pb-2 mb-4">
                   <h4 class="font-semibold text-lg">{{ $t('notifications.title') }}</h4>
-                  <button @click="isNotifOpen = false" class="text-sm text-primary-600">{{ $t('notifications.markAll') }}</button>
+                  <button @click="isNotifOpen = false" class="text-sm cursor-pointer text-primary-600">{{ $t('notifications.markAll') }}</button>
                 </div>
                 <NotificationItem
                   v-for="(notif, index) in notifications"
@@ -141,13 +145,14 @@ isSidebarOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0']">
           <div class="relative group">
             <button @click="isProfileOpen = !isProfileOpen" class="flex items-center gap-2">
               <img
-                src="https://i.pravatar.cc/40"
+                src="https://randomuser.me/api/portraits/men/44.jpg"
                 alt="Avatar"
                 class="w-10 h-10 rounded-full object-cover border-2 border-primary-500"
               />
             </button>
             <div v-if="isProfileOpen" class="absolute right-0 mt-2 w-48 bg-white dark:bg-header-dark rounded-xl shadow-xl py-2">
               <router-link
+                @click="isProfileOpen = false"
                 :to="PtRoutes.profile"
                 class="px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center gap-2"
               >
@@ -155,6 +160,7 @@ isSidebarOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0']">
                 {{ $t('sidebar.links.profile') }}
               </router-link>
               <router-link
+                @click="isProfileOpen = false"
                 :to="PtRoutes.settings"
                 class="px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center gap-2"
               >
@@ -162,6 +168,7 @@ isSidebarOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0']">
                 {{ $t('sidebar.links.settings') }}
               </router-link>
               <router-link
+                @click="isProfileOpen = false"
                 :to="LandingRoutes.home"
                 class="w-full px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center gap-2">
                 <Icon icon="mdi:logout" />
@@ -190,6 +197,7 @@ import { useDark, useToggle } from '@vueuse/core'
 import { navigationGroups } from '@/helpers/ptNavGroups.ts'
 import { PtRoutes } from '@/helpers/routes/pt.ts'
 import { LandingRoutes } from '@/helpers/routes/landing.ts'
+
 // Dark mode toggle
 const isDark = useDark();
 const toggleDark = useToggle(isDark);

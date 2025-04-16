@@ -8,13 +8,14 @@
           <div class="relative">
             <div class="w-24 h-24 rounded-full border-4 border-white bg-gray-100">
               <!-- Profile image here -->
+              <img src="https://randomuser.me/api/portraits/men/52.jpg" class="rounded-full" alt="Alex M.">
             </div>
             <button class="absolute bottom-0 right-0 p-2 bg-white rounded-full shadow-md">
               <Icon icon="mdi:camera" class="w-6 h-6 text-blue-600" />
             </button>
           </div>
           <div>
-            <h1 class="text-3xl font-bold">John Fitness</h1>
+            <h1 class="text-3xl font-bold">Alex Johnson</h1>
             <p class="text-gray-200">Premium Member Since 2022</p>
             <div class="flex items-center mt-2">
               <Icon icon="mdi:map-marker" class="w-5 h-5 mr-1" />
@@ -58,7 +59,7 @@
     <div class="bg-white p-6 rounded-2xl shadow-md">
       <div class="flex items-center justify-between mb-6">
         <h2 class="text-2xl font-bold text-gray-800">Fitness Progress</h2>
-        <div class="flex items-center">
+        <div class="flex flex-col md:flex-row items-center">
           <button
             v-for="period in timePeriods"
             :key="period"
@@ -73,7 +74,7 @@
 
       <div class="h-64">
         <!-- Progress Chart -->
-<!--        <FitnessProgressChart :period="selectedPeriod" />-->
+        <FitnessProgressChart :period="selectedPeriod"/>
       </div>
     </div>
 
@@ -301,7 +302,7 @@
           <h2 class="text-2xl font-bold text-gray-800 mb-6">Settings</h2>
 
           <!-- Tabs Navigation -->
-          <div class="flex gap-4 border-b border-gray-200 mb-6">
+          <div class="flex flex-col md:flex-row gap-4 border-b border-gray-200 mb-6">
             <button
               v-for="tab in settingsTabs"
               :key="tab"
@@ -401,6 +402,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { Icon } from '@iconify/vue'
+import FitnessProgressChart from '@/components/student/FitnessProgressChart.vue'
 // import FitnessProgressChart from './components/FitnessProgressChart.vue'
 
 const settingsTabs = ref(['Account', 'Privacy', 'Notifications'])
@@ -542,7 +544,7 @@ const personalBests = ref([
 ])
 
 const devices = ref([
-  { id: 1, name: 'Apple Watch', icon: 'mdi:apple-watch', date: '2 days ago' },
+  { id: 1, name: 'Apple Watch', icon: 'mdi:watch', date: '2 days ago' },
   { id: 2, name: 'Fitbit Charge', icon: 'mdi:watch', date: '1 week ago' },
   { id: 3, name: 'Garmin HRM', icon: 'mdi:heart-pulse', date: '3 days ago' }
 ])
@@ -563,7 +565,7 @@ const upcomingSessions = ref([
     date: 'Apr 19, 2024',
     time: '2:30 PM',
     trainer: 'Coach Sarah',
-    icon: 'mdi:account-coach',
+    icon: 'mdi:account',
     bgColor: 'bg-blue-500'
   }
 ])

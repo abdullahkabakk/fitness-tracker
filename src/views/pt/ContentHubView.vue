@@ -17,8 +17,7 @@
           <Icon icon="mdi:magnify" class="absolute left-3 top-2.5 text-gray-400" />
         </div>
         <button
-          @click="showNewPlanModal = true"
-          class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-header-dark transition-colors flex items-center gap-2"
+          class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark cursor-pointer transition-colors flex items-center gap-2"
         >
           <Icon icon="mdi:plus" /> {{ $t('contentHub.createNew') }}
         </button>

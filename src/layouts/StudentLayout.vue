@@ -2,10 +2,14 @@
   <div class="flex flex-col min-h-screen bg-gray-50 dark:bg-gray-900">
     <!-- Mobile Menu Button -->
     <div
-      class="lg:hidden fixed flex top-0 w-full right-0 z-10 p-2 w-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700"
+      class="lg:hidden fixed flex top-0 w-full right-0 z-10 p-4 w-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700"
     >
-      <h2 class="text-xl  font-bold text-primary dark:text-white">FitJourney</h2>
-
+      <router-link to="/" class="flex  items-center space-x-2">
+        <div class="w-8 h-8 flex items-center justify-center dark:text-white">
+          <Icon icon="fluent:dumbbell-28-regular" class="w-full h-full text-primary" />
+        </div>
+        <span class="text-xl sm:text-2xl font-bold dark:text-white text-primary">FitJourney</span>
+      </router-link>
       <button
       @click="isSidebarOpen = !isSidebarOpen"
       class="ml-auto w-full mr-4"
@@ -22,9 +26,12 @@
       class="fixed inset-y-0 left-0 flex flex-col z-40 w-64 bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 transform transition-transform duration-200 ease-in-out lg:translate-x-0"
       :class="isSidebarOpen ? 'translate-x-0' : '-translate-x-full'"
     >
-      <div class="p-6">
-        <h2 class="text-xl font-bold text-primary dark:text-white">FitJourney</h2>
-      </div>
+      <router-link :to="StudentRoutes.home" class="flex  p-6 items-center space-x-2">
+        <div class="w-8 h-8 flex items-center justify-center dark:text-white">
+          <Icon icon="fluent:dumbbell-28-regular" class="w-full h-full text-primary" />
+        </div>
+        <span class="text-xl sm:text-2xl font-bold dark:text-white text-primary">FitJourney</span>
+      </router-link>
       <nav class="px-4 space-y-1">
         <template v-for="group in studentNavigationGroups" :key="group.id">
           <div class="px-2 py-3 text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
@@ -38,7 +45,7 @@
             class="flex items-center px-3 py-2.5 rounded-lg mb-1 transition-colors"
             :class="[
               $route.path === link.to
-                ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300'
+                ? 'bg-primary-100 dark:bg-primary-100 text-primary dark:text-primary'
                 : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
             ]"
           >
@@ -84,23 +91,34 @@
 <script setup lang="ts">
 import { Icon } from '@iconify/vue'
 import { studentNavigationGroups } from '@/helpers/studentNavGroups.ts'
-import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { ref, onMounted, onBeforeUnmount, watch } from 'vue'
 import { LandingRoutes } from '@/helpers/routes/landing.ts'
+import { useDark } from '@vueuse/core'
+import { StudentRoutes } from '@/helpers/routes/student.ts'
 
 const isSidebarOpen = ref(false)
+const isDark = useDark()
+const toggleDark = () => {
+  isDark.value = !isDark.value
+}
 
 // Close sidebar on desktop
 const checkScreenSize = () => {
-  if (window.innerWidth >= 1024) {
-    isSidebarOpen.value = true
-  } else {
-    isSidebarOpen.value = false
-  }
+  isSidebarOpen.value = window.innerWidth >= 1024;
 }
+
+watch(() => isDark.value, (newValue) => {
+  if (newValue) {
+    toggleDark()
+  }
+})
 
 // Handle responsive behavior
 onMounted(() => {
   checkScreenSize()
+  if (isDark.value) {
+    toggleDark()
+  }
   window.addEventListener('resize', checkScreenSize)
 })
 

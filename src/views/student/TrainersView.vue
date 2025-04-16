@@ -35,7 +35,7 @@
       </div>
 
       <!-- Specialty Filter -->
-      <div class="flex flex-wrap gap-2 mb-4">
+      <div class="flex flex-wrap gap-2">
         <button
           v-for="specialty in specialties"
           :key="specialty"
@@ -47,50 +47,6 @@
         >
           {{ specialty }}
         </button>
-      </div>
-
-      <!-- Additional Filters -->
-      <div class="flex flex-wrap gap-4">
-        <!-- Rating Filter -->
-        <div class="flex-1 min-w-[200px]">
-          <label class="block text-sm font-medium text-gray-700 mb-1">Minimum Rating</label>
-          <div class="flex items-center gap-2">
-            <input
-              type="range"
-              min="1"
-              max="5"
-              step="0.1"
-              v-model="filters.minRating"
-              class="w-full accent-blue-500"
-            />
-            <span class="flex items-center bg-gray-100 px-2 py-1 rounded-md text-sm">
-              <Icon icon="mdi:star" class="w-4 h-4 text-yellow-400 mr-1" />
-              {{filters.minRating}}
-            </span>
-          </div>
-        </div>
-
-        <!-- Experience Filter -->
-        <div class="flex-1 min-w-[200px]">
-          <label class="block text-sm font-medium text-gray-700 mb-1">Experience</label>
-          <select v-model="filters.experience" class="w-full rounded-lg border-gray-200 focus:border-blue-500 focus:ring-blue-500 text-sm">
-            <option value="any">Any Experience</option>
-            <option value="beginner">1-3 years</option>
-            <option value="intermediate">4-7 years</option>
-            <option value="expert">8+ years</option>
-          </select>
-        </div>
-
-        <!-- Availability Filter -->
-        <div class="flex-1 min-w-[200px]">
-          <label class="block text-sm font-medium text-gray-700 mb-1">Availability</label>
-          <select v-model="filters.availability" class="w-full rounded-lg border-gray-200 focus:border-blue-500 focus:ring-blue-500 text-sm">
-            <option value="any">Any Availability</option>
-            <option value="accepting">Accepting New Clients</option>
-            <option value="limited">Limited Availability</option>
-            <option value="waitlist">Waitlist Only</option>
-          </select>
-        </div>
       </div>
     </div>
 
@@ -108,21 +64,21 @@
         </div>
 
         <div
-          v-for="trainer in filteredTrainers"
+          v-for="(trainer, idx) in filteredTrainers"
           :key="trainer.id"
           class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-shadow"
         >
           <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6">
             <!-- Trainer Image -->
             <div class="w-32 h-32 rounded-xl overflow-hidden bg-gradient-to-tr from-blue-400 to-cyan-500 relative">
-              <img :src="trainer.image" class="w-full h-full object-cover" alt="Trainer profile" />
-              <div v-if="trainer.availability === 'accepting'" class="absolute bottom-0 left-0 right-0 bg-green-500 text-white text-xs font-medium text-center py-1">
+              <img :src="`https://randomuser.me/api/portraits/${idx%2 == 0 ? 'men' : 'women'}/${5+idx}.jpg`" :alt="trainer.name">
+              <div v-if="trainer.availability === 'accepting'" class="absolute bottom-0 left-0 right-0 bg-green-500/70 text-white text-xs font-medium text-center py-1">
                 Available
               </div>
-              <div v-else-if="trainer.availability === 'limited'" class="absolute bottom-0 left-0 right-0 bg-yellow-500 text-white text-xs font-medium text-center py-1">
+              <div v-else-if="trainer.availability === 'limited'" class="absolute bottom-0 left-0 right-0 bg-yellow-400/90 text-white text-xs font-medium text-center py-1">
                 Limited
               </div>
-              <div v-else class="absolute bottom-0 left-0 right-0 bg-red-500 text-white text-xs font-medium text-center py-1">
+              <div v-else class="absolute bottom-0 left-0 right-0 bg-red-500/80 text-white text-xs font-medium text-center py-1">
                 Waitlist
               </div>
             </div>
@@ -260,13 +216,14 @@
           <h3 class="text-xl font-semibold mb-4">Featured Trainers</h3>
           <div class="space-y-4">
             <div
-              v-for="trainer in topTrainers"
+              v-for="(trainer, idx) in topTrainers"
               :key="trainer.id"
               class="flex items-center gap-4 p-3 hover:bg-gray-50 rounded-xl cursor-pointer transition-colors"
             >
               <div class="w-16 h-16 rounded-xl overflow-hidden bg-gradient-to-tr from-purple-400 to-pink-500 relative">
-                <img :src="trainer.image" class="w-full h-full object-cover" alt="Trainer profile" />
-                <div v-if="trainer.availability === 'accepting'" class="absolute bottom-0 left-0 right-0 bg-green-500 text-white text-xs font-medium text-center py-1">
+                <img :src="`https://randomuser.me/api/portraits/${idx%2 == 0 ? 'men' : 'women'}/${32+idx}.jpg`" :alt="trainer.name">
+
+                <div v-if="trainer.availability === 'accepting'" class="absolute bottom-0 left-0 right-0 bg-green-500/70 text-white text-xs font-medium text-center py-1">
                   Available
                 </div>
               </div>
@@ -292,7 +249,7 @@
             <div class="bg-gray-50 p-4 rounded-xl">
               <div class="flex items-center gap-3 mb-3">
                 <div class="w-12 h-12 rounded-full overflow-hidden">
-<!--                  <img src="/testimonial1.jpg" class="w-full h-full object-cover" alt="Client photo" />-->
+                  <img src="https://randomuser.me/api/portraits/women/30.jpg" alt="Alex M.">
                 </div>
                 <div>
                   <h4 class="font-semibold">Alex M.</h4>
@@ -311,7 +268,7 @@
             <div class="bg-gray-50 p-4 rounded-xl">
               <div class="flex items-center gap-3 mb-3">
                 <div class="w-12 h-12 rounded-full overflow-hidden">
-<!--                  <img src="/testimonial2.jpg" class="w-full h-full object-cover" alt="Client photo" />-->
+                  <img src="https://randomuser.me/api/portraits/men/30.jpg" alt="Alex M.">
                 </div>
                 <div>
                   <h4 class="font-semibold">Jamie T.</h4>
@@ -331,14 +288,14 @@
         </div>
 
         <!-- Trainer Metrics -->
-        <div class="bg-gradient-to-tr from-blue-400 to-cyan-500 p-6 rounded-2xl shadow-md text-white">
-          <h3 class="text-xl font-semibold mb-4">Community Stats</h3>
-          <div class="space-y-4">
+        <div class="bg-white p-6 rounded-2xl shadow-md">
+          <h3 class="text-xl font-semibold mb-4 text-gray-800">Community Stats</h3>
+          <div class="space-y-4 text-gray-800">
             <div class="flex items-center justify-between">
               <p>Total Trainers</p>
               <p class="text-2xl font-bold">142</p>
             </div>
-            <div class="flex items-center justify-between">
+            <div class="flex items-center text-gray-800 justify-between">
               <p>Average Rating</p>
               <div class="flex items-center gap-2">
                 <p class="text-2xl font-bold">4.8</p>
@@ -356,38 +313,6 @@
               <p class="text-2xl font-bold">2,450+</p>
             </div>
           </div>
-          <div class="mt-6 pt-4 border-t border-white border-opacity-30">
-            <h4 class="font-medium mb-3">Client Success Metrics</h4>
-            <div class="space-y-3">
-              <div>
-                <div class="flex justify-between text-sm mb-1">
-                  <span>Weight Loss Goals</span>
-                  <span>92%</span>
-                </div>
-                <div class="h-2 bg-white bg-opacity-30 rounded-full">
-                  <div class="h-2 bg-yellow-300 rounded-full" style="width: 92%"></div>
-                </div>
-              </div>
-              <div>
-                <div class="flex justify-between text-sm mb-1">
-                  <span>Strength Improvement</span>
-                  <span>88%</span>
-                </div>
-                <div class="h-2 bg-white bg-opacity-30 rounded-full">
-                  <div class="h-2 bg-yellow-300 rounded-full" style="width: 88%"></div>
-                </div>
-              </div>
-              <div>
-                <div class="flex justify-between text-sm mb-1">
-                  <span>Program Completion</span>
-                  <span>79%</span>
-                </div>
-                <div class="h-2 bg-white bg-opacity-30 rounded-full">
-                  <div class="h-2 bg-yellow-300 rounded-full" style="width: 79%"></div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
 
         <!-- Become a Trainer CTA -->
@@ -396,9 +321,11 @@
             <Icon icon="mdi:trophy" class="w-12 h-12 mx-auto" />
             <h3 class="text-xl font-bold">Become a Trainer</h3>
             <p class="text-white text-opacity-90">Join our community of fitness professionals and help others achieve their goals.</p>
-            <button class="w-full bg-white text-purple-600 font-medium py-3 rounded-xl hover:bg-purple-50 transition-colors">
+            <RouterLink :to="PtRoutes.home">
+            <button class="w-full bg-white text-purple-600 font-medium py-3 rounded-xl hover:bg-purple-50 transition-colors cursor-pointer">
               Apply Now
             </button>
+            </RouterLink>
           </div>
         </div>
       </div>
@@ -409,6 +336,7 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
 import { Icon } from '@iconify/vue'
+import { PtRoutes } from '@/helpers/routes/pt.ts'
 
 const window = ref({ innerWidth: 0 })
 onMounted(() => {
