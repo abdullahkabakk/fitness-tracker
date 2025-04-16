@@ -1,14 +1,16 @@
+import { LandingRoutes } from '@/helpers/routes/landing.ts'
+
 export const landingNavbarRoutes = [
   {
-    path: '/coaches',
+    path: LandingRoutes.home,
+    name: "nav.users",
+  },
+  {
+    path: LandingRoutes.coaches,
     name: "nav.coaches",
   },
   {
-    path: '/#faq',
-    name: "nav.faq",
-  },
-  {
-    path: '#',
+    path: LandingRoutes.blog,
     name: "nav.blog",
   },
 ]

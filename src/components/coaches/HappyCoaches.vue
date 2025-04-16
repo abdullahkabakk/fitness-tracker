@@ -1,6 +1,6 @@
 <template>
   <section
-    class="py-20 bg-gradient-to-b from-white to-primary-50 dark:from-gray-900 dark:to-gray-800"
+    class="py-20 bg-gradient-to-b from-white to-secondary-50 dark:from-gray-900 dark:to-gray-800"
   >
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
@@ -43,13 +43,13 @@
           <p class="text-gray-600 dark:text-gray-300 italic">"{{ coach.testimonial }}"</p>
           <div class="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
             <p class="text-sm text-gray-600 dark:text-gray-400">
-              <span class="font-medium text-blue-600 dark:text-blue-400">{{
+              <span class="font-medium text-secondary-600 dark:text-secondary-400">{{
                 coach.monthlyEarnings
               }}</span>
               monthly earnings
             </p>
             <p class="text-sm text-gray-600 dark:text-gray-400">
-              <span class="font-medium text-blue-600 dark:text-blue-400">{{
+              <span class="font-medium text-secondary-600 dark:text-secondary-400">{{
                 coach.activeClients
               }}</span>
               active clients
@@ -59,9 +59,11 @@
       </div>
 
       <div class="mt-12 text-center">
-        <Button variant="primary" size="lg">
+        <RouterLink :to="PtRoutes.home">
+        <Button variant="secondary" size="lg">
           {{ $t('coaches.testimonials.joinButton') }}
         </Button>
+        </RouterLink>
       </div>
     </div>
   </section>
@@ -70,6 +72,7 @@
 <script setup lang="ts">
 import { Icon } from '@iconify/vue'
 import Button from '@/components/common/Button.vue'
+import { PtRoutes } from '@/helpers/routes/pt.ts'
 
 const coaches = [
   {

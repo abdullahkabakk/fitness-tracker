@@ -20,9 +20,25 @@
   --color-primary-800: #1E3A87;
   --color-primary-900: #1E3A76;
 
+  --color-secondary: #50B3A2;
+  --color-secondary-hover: #3D9A88;
+  --color-secondary-light: #6CC7B8;
+  --color-secondary-dark: #338B7A;
+  --color-secondary-text: #1D4F44;
+
+  --color-secondary-50: #E9F9F7;
+  --color-secondary-100: #C2F1EB;
+  --color-secondary-200: #99E8E0;
+  --color-secondary-300: #6EE0D4;
+  --color-secondary-400: #4BD6C0;
+  --color-secondary-500: #34C0B0;
+  --color-secondary-600: #2B9C96;
+  --color-secondary-700: #1F7C7C;
+  --color-secondary-800: #1D6B6B;
+  --color-secondary-900: #195A59;
 
   --color-background-light: #F7F9FC;
-  --color-background-dark: #3C3D37;
+  --color-background-dark: #323232;
 
   --color-header-light: #F7F9FC;
   --color-header-dark: #222222;

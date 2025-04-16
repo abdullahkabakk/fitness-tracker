@@ -1,5 +1,5 @@
 <template>
-  <section class="py-20 bg-gradient-to-t from-white to-primary-50 dark:from-gray-900 dark:to-gray-800">
+  <section class="py-20 bg-gradient-to-t from-white to-secondary-50 dark:from-gray-900 dark:to-gray-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <SectionTitleSubtitle
         :title="$t('coaches.features.title')"
@@ -12,13 +12,13 @@
           :key="feature.titleKey"
           class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 dark:border-gray-700 group"
         >
-          <div class="mb-4 p-3 rounded-full bg-primary/10 dark:bg-primary/10 w-16 h-16 flex items-center justify-center group-hover:bg-primary/20 dark:group-hover:bg-primary/20 transition-colors duration-300">
+          <div class="mb-4 p-3 rounded-full bg-secondary/10 dark:bg-secondary/10 w-16 h-16 flex items-center justify-center group-hover:bg-secondary/20 dark:group-hover:bg-secondary/20 transition-colors duration-300">
             <Icon
               :icon="feature.icon"
-              class="w-8 h-8 text-primary dark:text-primary"
+              class="w-8 h-8 text-secondary dark:text-secondary"
             />
           </div>
-          <h3 class="text-xl font-bold mb-3 text-primary-text dark:text-white group-hover:text-primary dark:group-hover:text-primary transition-colors duration-300">
+          <h3 class="text-xl font-bold mb-3 text-secondary-text dark:text-white group-hover:text-secondary dark:group-hover:text-secondary transition-colors duration-300">
             {{ $t(feature.titleKey) }}
           </h3>
           <p class="text-gray-600 dark:text-gray-300">
@@ -29,16 +29,16 @@
 
       <!-- Platform overview with tabs -->
       <div class="mt-24 bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-100 dark:border-gray-700">
-        <div class="mb-8 border-b border-gray-200 dark:border-gray-700 flex justify-center overflow-x-auto">
+        <div class="mb-8 flex justify-center overflow-x-auto">
           <div class="inline-flex rounded-lg bg-gray-100 dark:bg-gray-700 p-1.5">
             <button
               v-for="(tab, index) in tabs"
               :key="index"
               @click="activeTab = index"
               :class="[
-                'px-6 py-2.5 text-sm md:text-base font-medium rounded-md transition-all duration-300 whitespace-nowrap',
+                'px-6 cursor-pointer py-2.5 text-sm md:text-base font-medium rounded-md transition-all duration-300 whitespace-nowrap',
                 activeTab === index
-                  ? 'bg-white dark:bg-gray-800 text-primary dark:text-primary shadow-sm'
+                  ? 'bg-white dark:bg-gray-800 text-secondary dark:text-secondary shadow-sm'
                   : 'text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-white'
               ]"
             >
@@ -51,12 +51,12 @@
             <div v-for="(tab, index) in filteredTab" :key="`content-${index}`">
               <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                  <h3 class="text-2xl font-bold mb-4 text-primary dark:text-white">{{ $t(tab.contentTitleKey) }}</h3>
+                  <h3 class="text-2xl font-bold mb-4 text-secondary dark:text-white">{{ $t(tab.contentTitleKey) }}</h3>
                   <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">{{ $t(tab.contentDescriptionKey) }}</p>
                   <ul class="space-y-4">
                     <li v-for="(point, pointIndex) in tab.points" :key="pointIndex" class="flex">
                       <div class="mr-3 flex-shrink-0">
-                        <div class="w-6 h-6 rounded-full bg-primary dark:bg-primary flex items-center justify-center">
+                        <div class="w-6 h-6 rounded-full bg-secondary dark:bg-secondary flex items-center justify-center">
                           <Icon icon="material-symbols:check" class="w-4 h-4 text-white" />
                         </div>
                       </div>
@@ -65,10 +65,10 @@
                   </ul>
                 </div>
                 <div class="relative">
-                  <div class="absolute -top-4 -right-4 w-24 h-24 bg-primary/50 dark:bg-primary900 rounded-full opacity-50 blur-xl"></div>
-                  <div class="absolute -bottom-8 -left-8 w-32 h-32 bg-primary/50 dark:bg-primary800 rounded-full opacity-50 blur-xl"></div>
+                  <div class="absolute -top-4 -right-4 w-24 h-24 bg-secondary/50 dark:bg-secondary900 rounded-full opacity-50 blur-xl"></div>
+                  <div class="absolute -bottom-8 -left-8 w-32 h-32 bg-secondary/50 dark:bg-secondary800 rounded-full opacity-50 blur-xl"></div>
                   <img
-                    :src="`/api/placeholder/600/400`"
+                    :src="getImageUrl(tab.img)"
                     :alt="$t(tab.titleKey)"
                     class="rounded-xl shadow-xl relative transform transition-transform duration-500 hover:scale-105"
                   >
@@ -79,10 +79,10 @@
 
         <div class="grid md:grid-cols-3 gap-8">
           <div v-for="(detail, index) in platformDetails" :key="index" class="text-center p-6 border border-gray-100 dark:border-gray-700 rounded-lg bg-gray-50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800 transition-colors duration-300">
-            <div class="w-14 h-14 bg-primary/10 dark:bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Icon :icon="detail.icon" class="w-7 h-7 text-primary dark:text-primary400" />
+            <div class="w-14 h-14 bg-secondary/10 dark:bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Icon :icon="detail.icon" class="w-7 h-7 text-secondary dark:text-secondary400" />
             </div>
-            <h3 class="text-xl font-bold mb-2 text-primary dark:text-white">{{ $t(detail.titleKey) }}</h3>
+            <h3 class="text-xl font-bold mb-2 text-secondary dark:text-white">{{ $t(detail.titleKey) }}</h3>
             <p class="text-gray-600 dark:text-gray-300">{{ $t(detail.descriptionKey) }}</p>
           </div>
         </div>
@@ -101,6 +101,10 @@ const activeTab = ref(0);
 const filteredTab = computed(() => {
   return tabs.filter((tab, index) => index === activeTab.value);
 });
+
+const getImageUrl = (img: string) => {
+  return new URL(`/src/assets/img/pt-${img}`, import.meta.url).href;
+};
 
 const features = [
   {
@@ -140,6 +144,7 @@ const tabs = [
     titleKey: 'coaches.features.tabs.dashboard.title',
     contentTitleKey: 'coaches.features.tabs.dashboard.contentTitle',
     contentDescriptionKey: 'coaches.features.tabs.dashboard.contentDescription',
+    img: 'dashboard.png',
     points: [
       'coaches.features.tabs.dashboard.points.overview',
       'coaches.features.tabs.dashboard.points.clients',
@@ -151,6 +156,7 @@ const tabs = [
     titleKey: 'coaches.features.tabs.payments.title',
     contentTitleKey: 'coaches.features.tabs.payments.contentTitle',
     contentDescriptionKey: 'coaches.features.tabs.payments.contentDescription',
+    img: 'payments.png',
     points: [
       'coaches.features.tabs.payments.points.subscriptions',
       'coaches.features.tabs.payments.points.payouts',
@@ -162,6 +168,7 @@ const tabs = [
     titleKey: 'coaches.features.tabs.clients.title',
     contentTitleKey: 'coaches.features.tabs.clients.contentTitle',
     contentDescriptionKey: 'coaches.features.tabs.clients.contentDescription',
+    img: 'client-management.png',
     points: [
       'coaches.features.tabs.clients.points.profiles',
       'coaches.features.tabs.clients.points.progress',

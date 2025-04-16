@@ -10,18 +10,29 @@
       <div class="flex justify-between items-center">
         <!-- Logo -->
         <router-link to="/" class="flex items-center space-x-2">
-          <div class="w-8 h-8 flex items-center justify-center text-primary dark:text-white">
+          <div class="w-8 h-8 flex items-center justify-center dark:text-white"
+          :class="isHomePage ? 'text-primary' : 'text-secondary'">
             <Icon icon="fluent:dumbbell-28-regular" class="w-full h-full" />
           </div>
-          <span class="text-xl sm:text-2xl font-bold text-primary dark:text-white">FitJourney</span>
+          <span class="text-xl sm:text-2xl font-bold dark:text-white"
+                :class="isHomePage ? 'text-primary' : 'text-secondary'">FitJourney</span>
         </router-link>
 
         <!-- Desktop Navigation -->
         <div class="hidden lg:flex items-center space-x-8">
-          <router-link v-for="item in landingNavbarRoutes"
-                       :key="item.name"
-                       :to="item.path"
-                       class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary-light transition-colors">
+          <router-link
+            v-for="item in landingNavbarRoutes"
+            :key="item.name"
+            :to="item.path"
+            :class="[
+      'relative pb-1 transition-colors',
+      route.path === item.path
+        ? isHomePage
+        ?  'text-primary dark:text-primary-light font-medium after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-primary dark:after:bg-primary-light'
+        : 'text-secondary dark:text-secondary-light font-medium after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-secondary dark:after:bg-secondary-light'
+        : 'text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary-light'
+    ]"
+          >
             {{ $t(item.name) }}
           </router-link>
         </div>
@@ -52,12 +63,12 @@
             <div v-if="showLoginDropdown"
                  class="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg border border-gray-300 dark:border-gray-700 z-20 animate-fadeIn">
               <div class="py-1">
-                <router-link to="/coach-login"
+                <router-link :to="PtRoutes.home"
                              class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
                              @click="closeDropdowns">
                   {{ $t('nav.coachLogin') }}
                 </router-link>
-                <router-link to="/student-login"
+                <router-link :to="StudentRoutes.home"
                              class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
                              @click="closeDropdowns">
                   {{ $t('nav.studentLogin') }}
@@ -69,7 +80,8 @@
           <!-- Register Button -->
           <div class="relative hidden sm:block" ref="registerRef">
             <button @click="toggleRegisterDropdown"
-                    class="px-4 py-2 text-sm bg-primary hover:bg-primary-dark text-white rounded-md focus:outline-none transition-colors">
+                    :class="isHomePage ? 'bg-primary hover:bg-primary-dark' : 'bg-secondary hover:bg-secondary-dark'"
+                    class="px-4 py-2 text-sm cursor-pointer text-white rounded-md focus:outline-none transition-colors">
               <span>{{ $t('nav.register') }}</span>
               <Icon icon="material-symbols:keyboard-arrow-down" class="w-5 h-5 inline-block ml-1 transition-transform"
                     :class="{'rotate-180': showRegisterDropdown}" />
@@ -79,12 +91,12 @@
             <div v-if="showRegisterDropdown"
                  class="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg border border-gray-300 dark:border-gray-700 z-20 animate-fadeIn">
               <div class="py-1">
-                <router-link to="/coach-register"
+                <router-link :to="PtRoutes.home"
                              class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
                              @click="closeDropdowns">
                   {{ $t('nav.coachRegister') }}
                 </router-link>
-                <router-link to="/student-register"
+                <router-link :to="StudentRoutes.home"
                              class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
                              @click="closeDropdowns">
                   {{ $t('nav.studentRegister') }}
@@ -127,12 +139,12 @@
 
             <!-- Mobile Login Dropdown -->
             <div v-if="showMobileLoginDropdown" class="mt-1 pl-4 animate-fadeIn">
-              <router-link to="/coach-login"
+              <router-link :to="PtRoutes.home"
                            class="block px-2 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md"
                            @click="closeMenu">
                 {{ $t('nav.coachLogin') }}
               </router-link>
-              <router-link to="/student-login"
+              <router-link :to="StudentRoutes.home"
                            class="block px-2 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md"
                            @click="closeMenu">
                 {{ $t('nav.studentLogin') }}
@@ -152,12 +164,12 @@
 
             <!-- Mobile Register Dropdown -->
             <div v-if="showMobileRegisterDropdown" class="mt-1 pl-4 animate-fadeIn">
-              <router-link to="/coach-register"
+              <router-link :to="PtRoutes.home"
                            class="block px-2 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md"
                            @click="closeMenu">
                 {{ $t('nav.coachRegister') }}
               </router-link>
-              <router-link to="/student-register"
+              <router-link :to="StudentRoutes.home"
                            class="block px-2 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md"
                            @click="closeMenu">
                 {{ $t('nav.studentRegister') }}
@@ -171,14 +183,24 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue';
+import { ref, onMounted, onUnmounted, computed } from 'vue'
 import { useI18n } from 'vue-i18n';
 import { Icon } from '@iconify/vue';
 import { useDark, useToggle, onClickOutside } from '@vueuse/core';
 import { landingNavbarRoutes } from '@/helpers/landingNavbarRoutes.ts'
 import LanguageSelector from '@/components/common/LanguageSelector.vue'
+import { PtRoutes } from '@/helpers/routes/pt.ts'
+import { useRoute } from 'vue-router'
+import { StudentRoutes } from '@/helpers/routes/student.ts'
+import { LandingRoutes } from '@/helpers/routes/landing.ts'
 
 const { locale } = useI18n()
+
+const isHomePage = computed(() => {
+  // Check if the current route is the home page
+  return route.path === LandingRoutes.home || route.path === LandingRoutes.blog
+})
+
 // Close all dropdowns
 const closeDropdowns = () => {
   showLoginDropdown.value = false;
@@ -189,6 +211,7 @@ const closeDropdowns = () => {
 // Dark mode toggle
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
+const route = useRoute()
 
 // Navigation state
 const scrolled = ref(false);

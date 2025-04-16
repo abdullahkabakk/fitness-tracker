@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { Icon } from '@iconify/vue';
 import Button from '../common/Button.vue';
+import { PtRoutes } from '@/helpers/routes/pt.ts'
 
 // Props for customization
 interface Props {
@@ -41,21 +42,24 @@ withDefaults(defineProps<Props>(), {
 
           <!-- Buttons -->
           <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+            <RouterLink :to="PtRoutes.home">
+
             <Button
               v-if="primaryButtonTextKey"
               :to="primaryButtonLink"
-              variant="primary"
+              variant="secondary"
               size="lg"
               class="font-medium flex shadow-lg hover:shadow-xl transition-all duration-300"
             >
               {{ $t(primaryButtonTextKey) }}
               <Icon icon="material-symbols:arrow-forward" class="ml-2 my-auto w-5 h-5" />
             </Button>
+            </RouterLink>
 
             <Button
               v-if="secondaryButtonTextKey"
               :to="secondaryButtonLink"
-              variant="outline"
+              variant="outline-secondary"
               size="lg"
             >
               {{ $t(secondaryButtonTextKey) }}

@@ -2,19 +2,27 @@
 import Button from '@/components/common/Button.vue'
 import TrustedBy from '@/components/home/hero/TrustedBy.vue'
 import StatsItem from '@/components/common/StatsItem.vue'
+import { useRouter } from 'vue-router'
+import { PtRoutes } from '@/helpers/routes/pt.ts'
+
+const router = useRouter()
 
 const buttons = [
   {
     text: 'coachRegister',
-    variant: 'primary',
+    variant: 'secondary',
     size: 'lg',
-    click: () => {},
+    click: () => {
+      router.push(PtRoutes.home)
+    },
   },
   {
     text: 'coachLogin',
-    variant: 'outline',
+    variant: 'outline-secondary',
     size: 'lg',
-    click: () => {},
+    click: () => {
+      router.push(PtRoutes.home)
+    },
   },
 ]
 
@@ -39,11 +47,21 @@ const stats = [
 </script>
 
 <template>
-  <div class="pt-32 pb-20 bg-gradient-to-b from-white to-primary-50 dark:from-gray-900 dark:to-gray-800">
+  <div class="pt-32 pb-20 bg-gradient-to-b from-white to-secondary-50 dark:from-gray-900 dark:to-gray-800">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center px-4 py-6 lg:px-8 lg:py-10">
-      <div class="md:w-1/2 mb-12 md:mb-0">
+
+
+      <div class="md:w-3/5 lg:w-2/3 relative">
+        <img
+          src="@/assets/img/pt-dashboard.png"
+          alt="Hero Image"
+          class="w-11/12 rounded-lg shadow-lg"/>
+        <div class="absolute -top-4 -left-4 w-24 h-24 bg-teal-200 dark:bg-teal-900 rounded-full opacity-50 blur-xl"></div>
+        <div class="absolute -bottom-8 -right-8 w-32 h-32 bg-green-200 dark:bg-green-900 rounded-full opacity-50 blur-xl"></div>
+      </div>
+      <div class="md:w-2/5 lg:w-1/3 mb-12 md:mb-0">
         <h1
-          class="text-4xl sm:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-primary-dark dark:from-primary-light dark:to-blue-400 bg-clip-text text-transparent"
+          class="text-4xl sm:text-5xl font-bold mb-6 bg-gradient-to-r from-secondary to-secondary-dark dark:from-secondary-light dark:to-green-400 bg-clip-text text-transparent"
         >
           {{ $t('coaches.hero.title') }}
         </h1>
@@ -75,11 +93,6 @@ const stats = [
             :isCurrency="stat.isCurrency"
           />
         </div>
-      </div>
-
-      <div class="md:w-1/2 relative">
-        <div class="absolute -top-4 -left-4 w-24 h-24 bg-purple-200 dark:bg-purple-900 rounded-full opacity-50 blur-xl"></div>
-        <div class="absolute -bottom-8 -right-8 w-32 h-32 bg-blue-200 dark:bg-blue-900 rounded-full opacity-50 blur-xl"></div>
       </div>
     </div>
   </div>

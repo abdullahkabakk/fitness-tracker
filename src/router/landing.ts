@@ -4,7 +4,7 @@ export const landingRoutes = [
   {
     path: LandingRoutes.home,
     name: LandingRouteNames.home,
-    component: () => import('@/views/HomeView.vue'),
+    component: () => import('@/views/landing/HomeView.vue'),
     meta: {
       layout: 'DefaultLayout',
     },
@@ -12,7 +12,15 @@ export const landingRoutes = [
   {
     path: LandingRoutes.coaches,
     name: LandingRouteNames.coaches,
-    component: () => import('@/views/CoachView.vue'),
+    component: () => import('@/views/landing/CoachView.vue'),
+    meta: {
+      layout: 'DefaultLayout',
+    },
+  },
+  {
+    path: LandingRoutes.blog,
+    name: LandingRouteNames.blog,
+    component: () => import('@/views/landing/BlogView.vue'),
     meta: {
       layout: 'DefaultLayout',
     },
