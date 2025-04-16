@@ -1,5 +1,5 @@
 <template>
-  <section class="py-20 bg-gradient-to-b from-white to-primary-50 dark:from-gray-900 dark:to-gray-800">
+  <section class="pb-20 bg-gradient-to-b from-white to-primary-50 dark:from-gray-900 dark:to-gray-800">
     <div class="max-w-7xl mx-auto px-4 py-6 lg:px-8 lg:py-10">
       <SectionTitleSubtitle
         :title="$t('home.blog.title')"
@@ -10,7 +10,7 @@
         <div
           v-for="(post, index) in blogPosts"
           :key="index"
-          class="flex flex-col justify-between h-full bg-gray-100 dark:bg-gray-800 rounded-xl shadow-md hover:shadow-xl transition-all"
+          class="flex flex-col justify-between h-full bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-xl transition-all"
         >
           <img
             :src="post.banner"
