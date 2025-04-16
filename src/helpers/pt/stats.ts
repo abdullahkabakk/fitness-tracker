@@ -1,0 +1,38 @@
+export const stats = [
+  {
+    title: 'Active Clients',
+    value: 42,
+    icon: 'mdi:account-group',
+    trend: 'up' as const,
+    percentage: 8,
+    unit: '',
+    isCurrency: false,
+  },
+  {
+    title: 'Sessions This Week',
+    value: 28,
+    icon: 'mdi:calendar-check',
+    trend: 'up' as const,
+    percentage: 12,
+    unit: '',
+    isCurrency: false,
+  },
+  {
+    title: 'Monthly Revenue',
+    value: 5850,
+    icon: 'mdi:currency-usd',
+    trend: 'up' as const,
+    percentage: 15,
+    isCurrency: true,
+    currency: 'USD',
+  },
+  {
+    title: 'Client Retention',
+    value: 93,
+    icon: 'mdi:account-check',
+    trend: 'down' as const,
+    percentage: 2,
+    unit: '%',
+    isCurrency: false,
+  },
+]
