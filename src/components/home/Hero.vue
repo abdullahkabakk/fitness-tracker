@@ -49,7 +49,6 @@ import Button from '@/components/common/Button.vue'
 import TrustedBy from '@/components/home/hero/TrustedBy.vue'
 import {useRouter} from 'vue-router'
 import { StudentRoutes } from '@/helpers/routes/student.ts'
-import { PtRoutes } from '@/helpers/routes/pt.ts'
 
 const router = useRouter()
 
@@ -64,11 +63,11 @@ const buttons = [
     },
   },
   {
-    text: 'forCoaches',
+    text: 'getStarted',
     variant: 'outline',
     size: 'lg',
     click: () => {
-      router.push(PtRoutes.home)
+      router.push(StudentRoutes.home)
       // Handle coach login button click
     },
   },
