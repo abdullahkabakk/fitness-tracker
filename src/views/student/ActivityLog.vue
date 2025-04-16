@@ -393,7 +393,7 @@ import type { ApexOptions } from 'apexcharts'
 const currentDate = ref('April 16, 2025')
 const daysUntilNextSession = ref(2)
 const trainerName = ref('Sarah Johnson')
-const trainerAvatar = ref('/api/placeholder/50/50')
+const trainerAvatar = ref('https://randomuser.me/api/portraits/women/25.jpg')
 
 // Current Program Stats
 const currentProgram = ref({
