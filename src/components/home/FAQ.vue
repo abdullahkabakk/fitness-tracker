@@ -1,5 +1,5 @@
 <template>
-  <section class="py-20 px-4 lg:px-8  from-white to-primary-50 dark:from-gray-900 dark:to-gray-800"
+  <section class="py-20 px-4 lg:px-8  from-white dark:from-gray-900 dark:to-gray-800"
   :class="isTopOrDown"
   >
     <div class="max-w-4xl mx-auto" id="faq">
@@ -44,7 +44,7 @@
         <p class="text-gray-600 dark:text-gray-300 mb-4">
           {{ $t('home.faq.stillHaveQuestions') }}
         </p>
-        <Button variant="outline">{{ $t('home.faq.contactUs') }}</Button>
+        <Button :variant="isHomePage ? 'outline' : 'outline-secondary'">{{ $t('home.faq.contactUs') }}</Button>
       </div>
     </div>
   </section>
@@ -72,6 +72,9 @@ const toggleFaq = (index: number) => {
   openIndex.value = openIndex.value === index ? -1 : index
 }
 
+const isHomePage = computed(() => {
+  return router.currentRoute.value.name === 'home'
+})
 
 const visibleFaqItems = computed(() => {
   return faqItems.filter(
@@ -81,7 +84,7 @@ const visibleFaqItems = computed(() => {
 
 const isTopOrDown = computed(() => {
   const routeName = router.currentRoute.value.name
-  return routeName === 'home' ? 'bg-gradient-to-b' : 'bg-gradient-to-t'
+  return routeName === 'home' ? 'bg-gradient-to-b to-primary-50' : 'bg-gradient-to-t to-secondary-50'
 })
 
 const faqItems = [

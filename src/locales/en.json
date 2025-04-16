@@ -9,6 +9,7 @@
     "mo": "mo",
     "saveYearly": "Save ${amount} when you pay yearly"
   },
+  "active": "Active",
   "nav": {
     "features": "Features",
     "pricing": "Pricing",
@@ -19,9 +20,49 @@
     "coachRegister": "Coach Register",
     "studentRegister": "Student Register",
     "coaches": "For Coaches",
+    "users": "For Users",
     "blog": "Blog",
     "faq": "FAQ",
     "getStarted": "Get Started"
+  },
+  "contentHub": {
+    "contentManagementHub": "Content Management Hub",
+    "manageYourContent": "Manage workout plans, nutrition guides and other content",
+    "createNew": "Create New",
+    "searchPlans": "Search plans...",
+    "workoutIncludes": "Workout Includes",
+    "nutritionDetails": "Nutrition Details",
+    "contentIncludes": "Content Includes",
+    "moreExercises": "more exercises",
+    "includesMeals": "Includes {count} daily meals",
+    "notAssigned": "Not assigned",
+    "active": "Active",
+    "archived": "Archived",
+    "edit": "Edit",
+    "assign": "Assign",
+    "archive": "Archive",
+    "activate": "Activate",
+    "delete": "Delete",
+    "assignPlan": "Assign {title}",
+    "searchClients": "Search clients...",
+    "noClientsFound": "No clients found",
+    "cancel": "Cancel",
+    "saveAssignments": "Save Assignments",
+    "createNewPlan": "Create New Plan",
+    "planType": "Plan Type",
+    "workoutPlan": "Workout Plan",
+    "nutritionPlan": "Nutrition Plan",
+    "contentPlan": "Content Library",
+    "title": "Title",
+    "duration": "Duration",
+    "weeks": "weeks",
+    "createPlan": "Create Plan",
+    "calories": "CALORIES",
+    "protein": "PROTEIN",
+    "carbs": "CARBS",
+    "fats": "FATS",
+    "noPlansFound": "No plans found",
+    "noPlansFoundDescription": "Create your first plan to get started or try changing your search query."
   },
   "home": {
     "hero": {
@@ -29,6 +70,7 @@
       "subtitle": "Track your progress, connect with coaches, and achieve your fitness goals with our all-in-one platform.",
       "startTrial": "Start Free Trial",
       "coachLogin": "Coach Login",
+      "forCoaches": "Join as a Coach",
       "trustedBy": "Trusted by thousands of fitness enthusiasts and coaches worldwide",
       "activeCoaches": "Active Coaches"
     },
@@ -449,6 +491,465 @@
       "terms": "Terms of Service",
       "contact": "Contact Us",
       "gdpr": "GDPR"
+    }
+  },
+  "notifications": {
+    "title": "Notifications",
+    "noNotifications": "No new notifications",
+    "markAll": "Mark all as read"
+  },
+  "sidebar": {
+    "groups": {
+      "dashboard": "Dashboard",
+      "communication": "Communication",
+      "account": "Account",
+      "earnings": "Management"
+    },
+    "links": {
+      "overview": "Home",
+      "students": "Students",
+      "plans": "Plans",
+      "chat": "Chat",
+      "contentHub": "Content Hub",
+      "notifications": "Notifications",
+      "profile": "Profile",
+      "calendar": "Calendar",
+      "earnings": "Earnings",
+      "settings": "Settings"
+    },
+    "logout": "Logout"
+  },
+  "dashboard": {
+    "metrics": {
+      "expiringSoon": "Expiring Soon",
+      "activePlans": "Active Plans",
+      "totalClients": "Total Clients",
+      "goalAchievers": "Goal Achievers"
+    }
+  },
+  "earnings": {
+    "title": "Earnings",
+    "subtitle": "Earnings for {date}",
+    "exportButton": "Export",
+    "payoutButton": "Request Payout",
+    "dateRange": "Date Range",
+    "tabs": {
+      "dashboard": "Dashboard",
+      "subscriptions": "Subscriptions"
+    },
+    "dateRanges": {
+      "month": "Month",
+      "quarter": "Quarter",
+      "year": "Year",
+      "custom": "Custom"
+    },
+    "metrics": {
+      "totalRevenue": "Total Revenue",
+      "pendingBalance": "Pending Balance",
+      "avgSessionValue": "Average Session Value",
+      "activeClients": "Active Clients"
+    },
+    "charts": {
+      "monthlyRevenue": "Monthly Revenue",
+      "monthlyRevenueDesc": "Revenue trend for the selected month.",
+      "totalRevenue": "Total Revenue",
+      "netProfit": "Net Profit",
+      "timeRanges": {
+        "year": "Year",
+        "ytd": "Year to Date",
+        "custom": "Custom"
+      }
+    },
+    "payments": {
+      "title": "Payments",
+      "subtitle": "Payment details",
+      "filters": {
+        "all": "All",
+        "pending": "Pending",
+        "paid": "Paid"
+      },
+      "columns": {
+        "client": "Client",
+        "amount": "Amount",
+        "dueDate": "Due Date",
+        "status": "Status",
+        "action": "Action"
+      },
+      "statuses": {
+        "pending": "Pending",
+        "overdue": "Overdue",
+        "paid": "Paid"
+      },
+      "actions": {
+        "remind": "Remind",
+        "paidOn": "Paid on {date}"
+      },
+      "viewAll": "View All",
+      "showing": "Showing {count} payments",
+      "services": {
+        "nutritionPlan": "Nutrition Plan",
+        "personalTraining": "Personal Training",
+        "groupClass": "Group Class"
+      }
+    },
+
+    "payouts": {
+      "title": "Payouts",
+      "editSchedule": "Edit Schedule",
+      "nextPayout": "Next Payout",
+      "date": "Date",
+      "amount": "Amount",
+      "history": "Payout History",
+      "payoutMethod": "Payout Method",
+      "defaultMethod": "Default",
+      "change": "Change",
+      "methods": {
+        "bankTransfer": "Bank Transfer",
+        "paypal": "PayPal",
+        "stripe": "Stripe"
+      },
+      "statuses": {
+        "overdue": "Overdue",
+        "completed": "Completed",
+        "pending": "Pending",
+        "processing": "Processing"
+      }
+    }
+  },
+  "subscriptions": {
+    "plans": {
+      "basic": "Basic",
+      "premium": "Premium"
+    },
+    "metrics": {
+      "mrr": "Monthly Recurring Revenue (MRR)",
+      "arr": "Annual Recurring Revenue (ARR)",
+      "ltv": "Customer Lifetime Value (LTV)"
+    },
+    "churn": {
+      "title": "Churn Rate",
+      "subtitle": "Churn rate over time",
+      "atRiskCount": "{count} at risk"
+    },
+    "paymentMethods": {
+      "title": "Payment Methods",
+      "subtitle": "Most used payment methods",
+      "card": "Card",
+      "paypal": "PayPal",
+      "bankTransfer": "Bank Transfer"
+    },
+    "atRisk": {
+      "title": "At-Risk Clients",
+      "subtitle": "Clients at risk of churning",
+      "reportButton": "Generate Report",
+      "engagementLabel": "Engagement",
+      "riskLabel": "Risk: {risk}",
+      "contactButton": "Contact",
+      "historyButton": "History"
+    },
+    "ltv": {
+      "title": "LTV Calculator",
+      "subtitle": "Estimate your Customer Lifetime Value",
+      "infoButton": "More Info",
+      "avgRevenue": "Average Revenue",
+      "min": "Min",
+      "max": "Max",
+      "avgRetention": "Average Retention",
+      "estimatedLtv": "Estimated LTV",
+      "description": "Based on your inputs, this is the estimated Customer Lifetime Value."
+    },
+    "month": "month",
+    "months": "months"
+  },
+  "plans": {
+    "title": "Subscription Plans",
+    "description": "You can create custom subscription packages for your clients. Choose the features that best suit your coaching style and client needs.",
+    "createButton": "Create New Plan",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "savePercent": "Save 15%",
+    "saveText": "You save $50 with annual billing",
+    "perMonth": "per month",
+    "perYear": "per year",
+    "mostPopular": "Most Popular",
+    "subscribers": "{count} active subscribers",
+    "selectButton": "Select Plan",
+    "learnMore": "Learn More",
+    "starter": {
+      "name": "Starter",
+      "description": "Perfect for beginners looking to establish their fitness routine"
+    },
+    "pro": {
+      "name": "Professional",
+      "description": "Advanced coaching and nutrition support for serious athletes"
+    },
+    "premium": {
+      "name": "Premium",
+      "description": "Complete personalized coaching with VIP support and advanced analytics"
+    },
+    "features": {
+      "basicWorkouts": "Basic Workout Library",
+      "basicWorkoutsDesc": "Access to 50+ ready-to-use workout templates",
+      "weeklyCheckins": "Weekly Check-ins",
+      "emailSupport": "Email Support",
+      "progressTracking": "Progress Tracking",
+      "customPlans": "Custom Training Plans",
+      "customPlansDesc": "Personalized workout plans based on client goals",
+      "dailyCheckins": "Daily Check-ins",
+      "videoCalls": "Video Coaching Calls",
+      "videoCallsDesc": "Live video sessions for form correction and guidance",
+      "prioritySupport": "Priority Support",
+      "prioritySupportDesc": "Get responses within 2 hours during business hours",
+      "mealPlans": "Personalized Meal Plans",
+      "supplementGuide": "Supplement Recommendations",
+      "biometricAnalysis": "Biometric Analysis",
+      "workoutsPerMonth": "Workout Templates",
+      "coachCheckins": "Coach Check-ins",
+      "24/7Support": "24/7 Support Access",
+      "allProFeatures": "All Professional Features",
+      "privateCommunity": "Private Community Access"
+    },
+    "tooltips": {
+      "workoutsPerMonth": "Number of new workout templates you can create per month",
+      "supplementGuide": "Personalized supplement recommendations based on client goals"
+    },
+    "comparison": {
+      "title": "Plan Features Comparison",
+      "feature": "Feature",
+      "download": "Download PDF",
+      "categories": {
+        "basic": "Basic Features",
+        "coaching": "Coaching Features",
+        "nutrition": "Nutrition & Diet",
+        "support": "Support & Access"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "Can I switch between plans?",
+      "a1": "Yes, you can upgrade, downgrade, or cancel your subscription at any time. Changes to your plan will take effect at the start of your next billing cycle.",
+
+      "q2": "What happens when I exceed the workout template limit?",
+      "a2": "Once you reach your monthly limit for workout templates, you'll need to wait until the next billing cycle to create more. You can always upgrade to a higher tier for additional templates.",
+
+      "q3": "How are the video coaching calls scheduled?",
+      "a3": "After selecting a plan with video coaching, you'll gain access to a scheduling tool where you can book available time slots with your clients. Pro plan includes 2 sessions per month, while Premium offers unlimited sessions.",
+
+      "q4": "Is there a contract or minimum commitment period?",
+      "a4": "No, all plans are month-to-month with no long-term contract required. Annual billing options are available for a 15% discount.",
+
+      "q5": "What payment methods do you accept?",
+      "a5": "We accept all major credit cards, PayPal, and bank transfers for annual plans. All payments are processed securely through our payment processor."
+    }
+  },
+  "metrics": {
+    "revenue": "Monthly Revenue",
+    "subscriptions": "Active Subscriptions",
+    "retention": "Client Retention Rate"
+  },
+  "charts": {
+    "growth": "Subscription Growth",
+    "series": {
+      "subscriptions": "Subscribers",
+      "revenue": "Revenue"
+    },
+    "periods": {
+      "30d": "30 Days",
+      "90d": "90 Days",
+      "1y": "1 Year",
+      "all": "All Time"
+    },
+    "yaxis": {
+      "subscriptions": "Subscribers",
+      "revenue": "Revenue ($)"
+    }
+  },
+"pt": {
+    "settings": {
+      "title": "Account Settings",
+      "subtitle": "Manage your account settings and preferences",
+      "saveChanges": "Save Changes",
+      "account": "Account",
+      "security": "Security",
+      "notifications": "Notifications",
+      "integrations": "Integrations",
+      "personalInfo": "Personal Information",
+      "fullName": "Full Name",
+      "namePlaceholder": "Alex Morgan",
+      "email": "Email Address",
+      "connect": "Connect",
+      "connected": "Connected",
+      "logOut": "Log Out",
+      "phone": "Phone Number",
+      "phonePlaceholder": "+1 (555) 000-0000",
+      "professionalInfo": "Professional Information",
+      "certifications": "Certifications",
+      "certificationsPlaceholder": "NASM, ACE, CrossFit L1...",
+      "specialties": "Specialties",
+      "selectSpecialties": "Select specialties...",
+      "availability": "Availability Settings",
+      "workingHours": "Working Hours",
+      "sessionTypes": "Session Types",
+      "selectSessionTypes": "Select session types...",
+      "weeklyCalendar": "Weekly Availability",
+      "password": "Password Management",
+      "currentPassword": "Current Password",
+      "newPassword": "New Password",
+      "confirmPassword": "Confirm Password",
+      "twoFactorAuth": "Two-Factor Authentication",
+      "2faStatus": "Two-Factor Authentication",
+      "2faDescription": "Add an extra layer of security to your account",
+      "activeSessions": "Active Sessions",
+      "notificationPreferences": "Notification Preferences",
+      "emailNotifications": "Email Notifications",
+      "smsNotifications": "SMS Notifications",
+      "newMessages": "New Messages",
+      "paymentReminders": "Payment Reminders",
+      "connectedAccounts": "Connected Accounts",
+      "socialMedia": "Social Media Integration"
+    },
+    "profile": {
+      "bannerAlt": "Profile Banner",
+      "photoAlt": "Profile Photo",
+      "editProfile": "Edit Profile",
+      "profileInformation": "Profile Information",
+      "specialization": "Specialization",
+      "experience": "Experience",
+      "clientsAgeRange": "Clients Age Range",
+      "availability": "Availability",
+      "clientCapacity": "Client Capacity",
+      "successRate": "Success Rate",
+      "clientProgressAnalytics": "Client Progress Analytics",
+      "averageProgress": "Average Progress",
+      "engagementRate": "Engagement Rate",
+      "quickStats": "Quick Stats",
+      "monthlyEarnings": "Monthly Earnings",
+      "sessionsCompleted": "Sessions Completed",
+      "clientMessages": "Client Messages",
+      "recentNotifications": "Recent Notifications",
+      "viewAll": "View All",
+      "newMessage": "New Client Message",
+      "paymentReceived": "Payment Received: {amount}",
+      "systemMaintenance": "Scheduled System Maintenance",
+      "socialVerification": "Social Verification"
+    },
+    "chat": {
+      "online": "Online",
+      "lastActive": "Last Active",
+      "search": "Search",
+      "selectConversation": "Select conversation",
+      "selectConversationPrompt": "Select a conversation to view messages",
+      "messagePlaceholder": "Type your message here..."
+    },
+    "units": {
+      "sessions": " Sessions"
+    },
+    "days": {
+      "mon": "Mon",
+        "tue": "Tue",
+        "wed": "Wed",
+        "thu": "Thu",
+        "fri": "Fri",
+        "sat": "Sat",
+      "sun": "Sun"
+    },
+    "time": {
+      "week": "Week",
+        "month": "Month",
+        "year": "Year"
+    },
+    "home": {
+      "financialStatus": "Financial Status",
+      "revenueVsProfit": "Revenue vs. Net Profit",
+      "monthlyRevenue": "Monthly Revenue",
+      "avgSession": "Avg. Session",
+      "ytdRevenue": "YTD Revenue",
+      "revenue": "Revenue",
+      "profit": "Profit",
+      "welcomeBack": "Welcome back, {name}",
+      "scheduleSessions": "Schedule Sessions",
+      "lastMonth": "vs last month",
+      "clientActivity": "Client Activity",
+      "week": "Week",
+        "month": "Month",
+        "year": "Year",
+      "goalProgress": "Goal Progress",
+      "viewDetails": "View Details",
+      "avgCheckins": "Average {count} check-ins per day",
+      "activityChart": {
+        "checkIns": "Check-ins",
+        "workouts": "Workouts"
+      },
+      "sessions": {
+        "title": "Sessions",
+        "viewAll": "View All",
+        "subtitle": "Manage your sessions and track client progress",
+        "upcoming": "Upcoming Sessions",
+        "timeRemaining": "{time} remaining",
+        "columns": {
+          "client": "Client",
+          "time": "Time",
+          "type": "Type",
+          "status": "Status",
+          "action": "Action"
+        },
+        "statuses": {
+          "upcoming": "Upcoming",
+            "completed": "Completed",
+          "inProgress": "In Progress",
+          "canceled": "Canceled"
+        },
+        "sessionTypes": {
+          "strength": "Strength",
+          "cardio": "Cardio",
+          "yoga": "Yoga",
+          "pilates": "Pilates",
+          "zumba": "Zumba",
+          "boxing": "Boxing",
+          "oneOnOne": "One-on-One",
+          "group": "Group",
+          "virtual": "Virtual"
+        }
+
+      }
+    }
+  },
+  "student": {
+    "nav": {
+      "dashboard": "Home",
+      "training": "Training",
+      "communication": "Communication",
+      "account": "Account",
+      "overview": "Overview",
+      "schedule": "Schedule",
+      "notifications": "Notifications",
+      "workout_plans": "Workout Plans",
+      "progress": "Progress",
+      "fitnessTracking": "Fitness Tracking",
+      "nutrition": "Nutrition",
+      "program": "Program",
+      "messages": "Messages",
+      "support": "Support",
+      "activityLog": "Activity Log",
+      "trainers": "Trainers",
+      "chat": "Chat",
+      "profile": "Profile",
+      "payments": "Payments",
+      "settings": "Settings"
+    },
+    "home": {
+      "welcomeBack": "Welcome back, {name}!",
+      "bookSession": "Book Session",
+      "progressOverview": "Progress Overview",
+      "upcomingSessions": "Upcoming Sessions",
+      "recentNotifications": "Recent Notifications",
+      "quickActions": "Quick Actions",
+      "sessionTypes": {
+        "recovery": "Recovery",
+        "workout": "Workout",
+        "nutrition": "Nutrition",
+        "checkin": "Check-in"
+      }
     }
   }
 }
